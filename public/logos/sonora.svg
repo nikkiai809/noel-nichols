@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 340 80" fill="none">
+  <defs>
+    <linearGradient id="sonora-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#7c5cfc"/>
+      <stop offset="100%" stop-color="#c8a87c"/>
+    </linearGradient>
+  </defs>
+  <rect x="8" y="18" width="44" height="44" rx="12" fill="#7c5cfc" opacity="0.15"/>
+  <rect x="12" y="22" width="36" height="36" rx="8" fill="#7c5cfc" opacity="0.25"/>
+  <text x="30" y="49" font-family="Inter, sans-serif" font-weight="800" font-size="18" fill="url(#sonora-grad)" text-anchor="middle">SD</text>
+  <text x="64" y="46" font-family="Inter, sans-serif" font-weight="800" font-size="18" fill="currentColor" letter-spacing="1.5">SONORA</text>
+  <text x="64" y="46" font-family="Inter, sans-serif" font-weight="300" font-size="18" fill="#8e8e93" letter-spacing="1">DIGITAL CORP</text>
+  <text x="64" y="60" font-family="Inter, sans-serif" font-weight="500" font-size="9" fill="#c8a87c" letter-spacing="2">VENTURE STUDIO</text>
+</svg>

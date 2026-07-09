@@ -7,16 +7,16 @@ import { CommandMenu } from '@/components/layout/command-menu';
 
 export const metadata: Metadata = {
   title: {
-    default: 'Noel Nichols — Marketing Strategist & Creative Technologist',
+    default: 'Noel Nichols — Product Builder & Founder',
     template: '%s — Noel Nichols',
   },
   description:
-    'Marketing strategist, creative technologist, and builder. Bridging marketing, technology, creativity, music, AI, and community.',
+    'I build products at the intersection of AI, music, and human creativity. Founder of Sonora Digital Corp. Creator of SIGNAL, YAMI, and ABE Music Hub.',
   openGraph: {
     title: 'Noel Nichols',
     description:
-      'Marketing Strategist. Creative Technologist. Builder.',
-    url: 'https://noelnichols.com',
+      'Product builder, founder, and creative technologist. AI, product, design, and engineering.',
+    url: 'https://noel-nichols.vercel.app',
     siteName: 'Noel Nichols',
     locale: 'en_US',
     type: 'website',

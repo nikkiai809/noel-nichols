@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 80" fill="none">
+  <text x="0" y="48" font-family="'Noto Sans JP', 'Hiragino Sans', sans-serif" font-weight="300" font-size="40" fill="#2d8f7d">闇</text>
+  <text x="60" y="48" font-family="Inter, sans-serif" font-weight="700" font-size="24" fill="currentColor" letter-spacing="2">YAMI</text>
+  <text x="60" y="62" font-family="Inter, sans-serif" font-weight="400" font-size="9" fill="#2d8f7d" letter-spacing="0.5">SALUD MENTAL PREVENTIVA</text>
+  <circle cx="44" cy="44" r="2" fill="#2d8f7d"/>
+  <circle cx="48" cy="44" r="2" fill="#2d8f7d"/>
+  <circle cx="52" cy="44" r="2" fill="#2d8f7d" opacity="0.6"/>
+  <circle cx="56" cy="44" r="2" fill="#2d8f7d" opacity="0.3"/>
+</svg>

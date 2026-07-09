@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 380 80" fill="none">
+  <rect x="8" y="16" width="48" height="48" rx="24" fill="#10b981" opacity="0.12"/>
+  <rect x="14" y="22" width="36" height="36" rx="18" fill="#10b981" opacity="0.2"/>
+  <text x="32" y="47" font-family="Inter, sans-serif" font-weight="600" font-size="16" fill="#10b981" text-anchor="middle">+</text>
+  <text x="68" y="47" font-family="Inter, sans-serif" font-weight="600" font-size="19" fill="currentColor" letter-spacing="-0.3">Dr. Rafael Gómez Palafox</text>
+  <text x="68" y="61" font-family="Inter, sans-serif" font-weight="400" font-size="9" fill="#8e8e93" letter-spacing="0.5">Maxilofacial &amp; Oncología Dental</text>
+</svg>

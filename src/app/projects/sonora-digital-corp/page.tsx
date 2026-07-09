@@ -349,13 +349,13 @@ export default function SonoraDigitalCorpPage() {
         <div className="content-container px-6 md:px-8">
           <div className="border-t border-border pt-16 md:pt-24">
             <Link
-              href="/projects/blvck-squvd"
+              href="/projects/velvet-rouge"
               className="group flex items-center justify-between"
             >
               <div>
                 <p className="text-xs text-muted-foreground font-mono mb-1">Next Project</p>
                 <p className="text-xl sm:text-2xl font-semibold group-hover:opacity-60 transition-opacity">
-                  Blvck Squvd
+                  Velvet Rouge
                 </p>
               </div>
               <ArrowRight className="h-5 w-5 text-muted-foreground group-hover:text-foreground transition-colors" />

@@ -95,10 +95,10 @@ export default function VelvetRougeProjectPage() {
       <section className="section-padding">
         <div className="content-container px-6 md:px-8">
           <div className="border-t border-border pt-16 md:pt-24">
-            <Link href="/projects/sonora-music-hub" className="group flex items-center justify-between">
+            <Link href="/projects/sonora-digital-corp" className="group flex items-center justify-between">
               <div>
                 <p className="text-xs text-muted-foreground font-mono mb-1">Next Project</p>
-                <p className="text-xl sm:text-2xl font-semibold group-hover:opacity-60 transition-opacity">Sonora Music Hub</p>
+                <p className="text-xl sm:text-2xl font-semibold group-hover:opacity-60 transition-opacity">Sonora Digital Corp</p>
               </div>
               <ArrowRight className="h-5 w-5 text-muted-foreground group-hover:text-foreground transition-colors" />
             </Link>

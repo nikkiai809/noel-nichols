@@ -19,57 +19,39 @@ const projects = [
   },
   {
     title: 'YAMI',
-    subtitle: 'Creative Direction & Brand Identity',
+    subtitle: 'Preventive Mental Health Ecosystem',
     description:
-      'Creative direction, brand identity, and marketing strategy for a music and AI venture. Visual system design and positioning.',
+      'Three-layer preventive mental health platform — Miru (detect), Kiku (accompany), Tomoni (connect). Product strategy, brand identity, UX, and full-stack engineering.',
     href: '/projects/yami',
     year: '2025—2026',
-    tags: ['Brand Identity', 'Creative Direction', 'Marketing'],
+    tags: ['Product Strategy', 'Brand Identity', 'UX', 'Engineering'],
+  },
+  {
+    title: 'ABE Music Hub',
+    subtitle: '360° Music Label Operating System',
+    description:
+      'Complete music label OS connecting discovery, production, brand, distribution, and monetization in a single ecosystem. 11 interconnected spaces.',
+    href: '/projects/sonora-music-hub',
+    year: '2025—2026',
+    tags: ['Product', 'UX', 'Engineering', 'Ecosystem'],
   },
   {
     title: 'Velvet Rouge',
-    subtitle: 'Brand System & Creative Concept',
+    subtitle: 'Global Creative Network',
     description:
-      'Brand system development, naming, narrative, and visual exploration for a creative concept in the music space.',
+      'A private creative network connecting six global cities through editorial, observation, and cultural signal. Brand system, narrative, and identity.',
     href: '/projects/velvet-rouge',
     year: '2024—2025',
     tags: ['Brand System', 'Naming', 'Narrative', 'Visual Identity'],
   },
   {
-    title: 'Sonora Music Hub',
-    subtitle: 'Creative Ecosystem & Community Development',
-    description:
-      'Community building, economic development, and creative ecosystem strategy in collaboration with government and local stakeholders.',
-    href: '/projects/sonora-music-hub',
-    year: '2024—2026',
-    tags: ['Community', 'Ecosystem', 'Economic Development'],
-  },
-  {
-    title: 'Downtown Studios',
-    subtitle: 'Recording Studio Brand Development',
-    description:
-      'Brand development, creative direction, and marketing strategy for a recording studio. Music industry branding and visual identity.',
-    href: '/projects/downtown-studios',
-    year: '2024—2025',
-    tags: ['Brand Development', 'Creative Direction', 'Music Industry'],
-  },
-  {
     title: 'Sonora Digital Corp',
-    subtitle: 'Native Agent OS — MCP-Native Operating System',
+    subtitle: 'Venture Studio — Native Agent OS',
     description:
-      'Co-created a multi-agent AI operating system powering SIGNAL and enterprise products. 155 MCP tools, 128 skills, 6 ADK agents, 535 tests with 0 failures.',
+      'Co-founded a technology venture studio building AI-powered infrastructure. 155 MCP tools, 128 skills, 6 ADK agents, 535 tests with 0 failures.',
     href: '/projects/sonora-digital-corp',
     year: '2024—2026',
-    tags: ['AI OS', 'MCP Architecture', 'Multi-Agent', 'Product Strategy'],
-  },
-  {
-    title: 'Blvck Squvd',
-    subtitle: 'Record Label & Creative Collective',
-    description:
-      'Record label brand development, creative direction, and marketing strategy for an independent music collective and publishing platform.',
-    href: '/projects/blvck-squvd',
-    year: '2024—Present',
-    tags: ['Record Label', 'Creative Direction', 'Music Publishing'],
+    tags: ['AI OS', 'MCP Architecture', 'Multi-Agent', 'Venture Studio'],
   },
 ];
 

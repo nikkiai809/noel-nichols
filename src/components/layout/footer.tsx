@@ -1,41 +1,40 @@
-import Link from 'next/link';
+import { ArrowUpRight } from 'lucide-react';
 
-const socialLinks = [
+const socials = [
   { label: 'LinkedIn', href: 'https://linkedin.com/in/noelnichols1934' },
-  { label: 'Instagram', href: 'https://www.instagram.com/downtownxstudios' },
-  { label: 'SoundCloud', href: 'https://soundcloud.com/blvcksquvdrecords' },
-  { label: 'GitHub', href: '#' },
-  { label: 'Email', href: 'mailto:hello@noelnichols.com' },
+  { label: 'GitHub', href: 'https://github.com/nikkiai809' },
+  { label: 'X / Twitter', href: 'https://x.com/noelnichols' },
 ];
 
 export function Footer() {
   return (
-    <footer className="border-t border-border mt-32">
-      <div className="content-container px-6 md:px-8 py-12">
+    <footer className="section pb-12">
+      <div className="container-wide px-6 md:px-8 lg:px-12">
+        <div className="divider mb-12" />
         <div className="flex flex-col md:flex-row items-start md:items-center justify-between gap-6">
           <div>
-            <p className="text-sm font-semibold tracking-tight">Noel Nichols</p>
-            <p className="text-sm text-muted-foreground mt-1">
-              Marketing Strategist. Creative Technologist. Builder.
+            <p className="text-sm font-medium">Noel Nichols</p>
+            <p className="text-sm text-muted-foreground mt-0.5">
+              Building products at the intersection of AI, music, and creativity.
             </p>
           </div>
-          <div className="flex items-center gap-4">
-            {socialLinks.map((link) => (
-              <Link
-                key={link.label}
-                href={link.href}
-                className="text-sm text-muted-foreground hover:text-foreground transition-colors"
+          <div className="flex items-center gap-6">
+            {socials.map((s) => (
+              <a
+                key={s.label}
+                href={s.href}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-sm text-muted-foreground hover:text-foreground transition-colors inline-flex items-center gap-1"
               >
-                {link.label}
-              </Link>
+                {s.label} <ArrowUpRight className="h-3 w-3" />
+              </a>
             ))}
           </div>
         </div>
-        <div className="mt-8 pt-8 border-t border-border">
-          <p className="text-xs text-muted-foreground">
-            &copy; {new Date().getFullYear()} Noel Nichols. All rights reserved.
-          </p>
-        </div>
+        <p className="text-xs text-muted-foreground/50 mt-8">
+          &copy; {new Date().getFullYear()} Noel Nichols
+        </p>
       </div>
     </footer>
   );

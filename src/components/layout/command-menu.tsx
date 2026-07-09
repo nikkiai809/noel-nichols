@@ -17,10 +17,8 @@ const pages = [
   { label: 'SIGNAL', href: '/projects/signal', category: 'Projects' },
   { label: 'YAMI', href: '/projects/yami', category: 'Projects' },
   { label: 'Velvet Rouge', href: '/projects/velvet-rouge', category: 'Projects' },
-  { label: 'Sonora Music Hub', href: '/projects/sonora-music-hub', category: 'Projects' },
+  { label: 'ABE Music Hub', href: '/projects/sonora-music-hub', category: 'Projects' },
   { label: 'Sonora Digital Corp', href: '/projects/sonora-digital-corp', category: 'Projects' },
-  { label: 'Downtown Studios', href: '/projects/downtown-studios', category: 'Projects' },
-  { label: 'Blvck Squvd', href: '/projects/blvck-squvd', category: 'Projects' },
 ];
 
 export function CommandMenu() {
