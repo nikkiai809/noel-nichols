@@ -464,7 +464,7 @@ export default function HomePage() {
             <div className="flex flex-wrap items-center gap-4">
               <a
                 href="mailto:hello@noelnichols.com"
-                className="inline-flex items-center justify-center gap-2 px-8 py-3.5 bg-foreground text-background rounded-full text-sm font-semibold hover:opacity-80 transition-all min-w-[160px]"
+                className="inline-flex items-center justify-center gap-2 px-8 py-3.5 bg-[#0d0d0d] text-white rounded-full text-sm font-semibold hover:opacity-80 transition-all min-w-[160px]"
               >
                 CONTACTO
               </a>
