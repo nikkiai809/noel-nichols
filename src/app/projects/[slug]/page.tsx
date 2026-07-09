@@ -63,7 +63,7 @@ export default async function CaseStudyPage({ params }: Props) {
           </Link>
 
           <div className="flex items-center gap-3 mb-4">
-            <span className="w-2.5 h-2.5 rounded-full bg-[var(--color-accent)] opacity-60" />
+            <span className="w-2.5 h-2.5 rounded-full bg-[var(--color-accent)]" />
             <span className="text-[11px] font-mono text-[var(--color-fg-dim)] tracking-wider uppercase">
               {project.tagline}
             </span>
@@ -87,6 +87,19 @@ export default async function CaseStudyPage({ params }: Props) {
               <span className="text-[var(--color-fg-dim)]/50">Category: </span>
               <span className="text-[var(--color-fg)]/80">{project.category}</span>
             </span>
+            {project.url && project.url !== '#' && (
+              <>
+                <span className="text-[var(--color-border)]">/</span>
+                <a
+                  href={project.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-[var(--color-accent-light)] hover:underline"
+                >
+                  Live Demo &rarr;
+                </a>
+              </>
+            )}
           </div>
         </div>
       </section>
@@ -110,14 +123,26 @@ export default async function CaseStudyPage({ params }: Props) {
       {/* ─── CASE STUDY BODY ─── */}
       <CaseStudyClient project={project} />
 
-      {/* ─── TECH STACK ─── */}
+      {/* ─── TECHNOLOGY STACK BY CATEGORY ─── */}
       <section className="section-container px-6 md:px-10 pb-8">
         <div className="max-w-[720px] mx-auto">
           <div className="border-t border-[var(--color-border)] pt-8">
-            <h2 className="label-mono mb-4">Technology</h2>
-            <div className="flex flex-wrap gap-1.5">
-              {project.technologies.map((t) => (
-                <span key={t} className="badge badge-accent">{t}</span>
+            <h2 className="label-mono mb-6">Technology Stack</h2>
+            <div className="grid sm:grid-cols-2 gap-4">
+              {project.techCategories.map((cat) => (
+                <div key={cat.label}>
+                  <h3 className="text-xs font-semibold text-[var(--color-fg)] mb-2">{cat.label}</h3>
+                  <div className="flex flex-wrap gap-1.5">
+                    {cat.items.map((item) => (
+                      <span
+                        key={item}
+                        className="text-[10px] font-mono px-2 py-0.5 rounded border border-[var(--color-accent-border)] text-[var(--color-accent-light)] bg-[var(--color-accent-subtle)]"
+                      >
+                        {item}
+                      </span>
+                    ))}
+                  </div>
+                </div>
               ))}
             </div>
           </div>
@@ -130,7 +155,12 @@ export default async function CaseStudyPage({ params }: Props) {
           <h2 className="label-mono mb-4">Keywords</h2>
           <div className="flex flex-wrap gap-1.5">
             {project.keywords.map((kw) => (
-              <span key={kw} className="badge">{kw}</span>
+              <span
+                key={kw}
+                className="text-[10px] font-mono px-2 py-0.5 rounded border border-[var(--color-border)] text-[var(--color-fg-dim)] bg-[var(--color-bg-surface)]"
+              >
+                {kw}
+              </span>
             ))}
           </div>
         </div>

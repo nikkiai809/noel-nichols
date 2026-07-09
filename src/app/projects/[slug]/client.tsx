@@ -15,6 +15,7 @@ export function CaseStudyClient({ project }: Props) {
         <CaseStudyBody
           sections={project.sections}
           architecture={project.architecture}
+          screenshots={project.screenshots}
         />
       </div>
     </Container>

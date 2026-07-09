@@ -10,12 +10,36 @@ export interface ArchNode {
   primary?: boolean;
 }
 
+export interface Challenge {
+  title: string;
+  body: string;
+}
+
+export interface Lesson {
+  title: string;
+  body: string;
+}
+
+export interface Screenshot {
+  label: string;
+  caption: string;
+  color: string;
+}
+
 export interface CaseSection {
   id: string;
   title: string;
   body: string[];
-  variant?: 'text' | 'architecture' | 'features' | 'metrics';
+  variant?: 'text' | 'architecture' | 'features' | 'challenges' | 'lessons' | 'gallery';
   features?: string[];
+  challenges?: Challenge[];
+  lessons?: Lesson[];
+  screenshots?: Screenshot[];
+}
+
+export interface TechCategory {
+  label: string;
+  items: string[];
 }
 
 export interface Project {
@@ -26,11 +50,13 @@ export interface Project {
   role: string;
   category: string;
   technologies: string[];
+  techCategories: TechCategory[];
   keywords: string[];
   url: string;
   repo: string;
   metrics: Metric[];
   architecture?: ArchNode[];
+  screenshots?: Screenshot[];
   sections: CaseSection[];
 }
 
@@ -54,5 +80,11 @@ export interface Article {
 export interface Capability {
   title: string;
   description: string;
-  icon?: string;
+}
+
+/* ─── Recruiter Info ─── */
+
+export interface RecruiterInfo {
+  label: string;
+  value: string;
 }

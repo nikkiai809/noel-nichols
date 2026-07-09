@@ -2,7 +2,6 @@
 
 import Link from 'next/link';
 import { FadeIn } from '@/components/motion/fade-in';
-import { Badge } from '@/components/ui/badge';
 import type { Project } from '@/types';
 
 interface ProjectCardProps {
@@ -16,8 +15,10 @@ export function ProjectCard({ project, index = 0 }: ProjectCardProps) {
       <Link href={`/projects/${project.id}`} className="group block">
         <article className="card p-6 md:p-8 h-full group-hover:translate-y-[-3px] transition-all duration-400">
           <div className="flex items-center gap-3 mb-4">
-            <span className="flex-shrink-0 w-2 h-2 rounded-full bg-[var(--color-accent)] opacity-60" />
-            <Badge>{project.category}</Badge>
+            <span className="flex-shrink-0 w-2 h-2 rounded-full bg-[var(--color-accent)]" />
+            <span className="text-[11px] font-mono text-[var(--color-fg-dim)] tracking-wider uppercase">
+              {project.category}
+            </span>
           </div>
 
           <h3 className="text-lg md:text-xl font-semibold text-[var(--color-fg)] mb-2 group-hover:text-[var(--color-accent-light)] transition-colors">
@@ -29,13 +30,15 @@ export function ProjectCard({ project, index = 0 }: ProjectCardProps) {
           </p>
 
           <div className="flex flex-wrap gap-1.5 mb-5">
-            {project.technologies.slice(0, 4).map((t) => (
-              <span key={t} className="badge text-[10px]">
+            {project.technologies.slice(0, 5).map((t) => (
+              <span key={t} className="text-[10px] font-mono px-2 py-0.5 rounded border border-[var(--color-border)] text-[var(--color-fg-dim)] bg-[var(--color-bg-surface)]">
                 {t}
               </span>
             ))}
-            {project.technologies.length > 4 && (
-              <span className="badge text-[10px]">+{project.technologies.length - 4}</span>
+            {project.technologies.length > 5 && (
+              <span className="text-[10px] font-mono px-2 py-0.5 rounded border border-[var(--color-border)] text-[var(--color-fg-dim)]">
+                +{project.technologies.length - 5}
+              </span>
             )}
           </div>
 
