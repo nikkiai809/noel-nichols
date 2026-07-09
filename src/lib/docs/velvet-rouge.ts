@@ -8,31 +8,38 @@ export const velvetRougeDocs: DocContent[] = [
     ventureLabel: 'Velvet Rouge',
     ventureSlug: 'velvet-rouge',
     description:
-      'Market analysis for Velvet Rouge — a premium creative and lifestyle brand at the intersection of music, fashion, and culture.',
-    readingTime: '6 min read',
-    lastUpdated: 'Mar 2026',
-    tags: ['Market Analysis', 'Research', 'Brand Strategy'],
+      'Market context and strategic positioning for Velvet Rouge — an invitation-only global creative network connecting six of the world\'s most creative capitals.',
+    readingTime: '5 min read',
+    lastUpdated: 'Jul 2026',
+    tags: ['Market Analysis', 'Research', 'Creative Network'],
     sections: [
       {
-        id: 'market-context',
-        title: 'Market Context',
-        type: 'text',
+        id: 'concept',
+        title: 'What Velvet Rouge Is',
+        type: 'arch',
         body: [
-          'The premium lifestyle and creative brand market is undergoing a generational shift. Millennial and Gen Z consumers increasingly value authenticity, community, and cultural credibility over traditional luxury signals. Brands that successfully bridge music, fashion, and art — like Off-White, Palace, and Aimé Leon Dore — have built billion-dollar valuations.',
-          'Velvet Rouge enters this space with a distinct positioning: a brand born from music culture, not fashion. The brand\'s foundation in the creative community gives it authenticity that traditional fashion brands struggle to manufacture.',
+          'Velvet Rouge is not a brand, not an event, not a place. It is a private network drawn between six cities — a single coordinate of culture that moves across the globe. Nothing is announced. Everything is implied.',
+          'It exists as a global creative network connecting Mexico City, Tokyo, Seoul, Berlin, Los Angeles, and Shanghai. Each city belongs to the same invisible whole. The connection is never explained — only felt.',
         ],
       },
       {
-        id: 'target-demographic',
-        title: 'Target Demographic',
-        type: 'metrics',
-        body: ['Premium creative brand targeting the cultural consumer.'],
-        metrics: [
-          { value: '22-35', label: 'Primary age range' },
-          { value: '60%', label: 'Male / 35% Female / 5% Non-binary' },
-          { value: '$75K+', label: 'Average household income' },
-          { value: 'Urban', label: 'Primary geographic concentration' },
+        id: 'cultural-context',
+        title: 'Cultural Context',
+        type: 'text',
+        body: [
+          'The most significant cultural production no longer happens in isolation. Creative scenes in Mexico City, Tokyo, Berlin, and Los Angeles are increasingly interconnected — artists, musicians, designers, and writers moving between them, carrying ideas across borders.',
+          'Yet there is no infrastructure for this invisible network. No publication documents it. No institution supports it. No platform connects the creative class across these cities without commercializing the connection.',
+          'Velvet Rouge fills this void — not as a social network, but as a cultural observation platform. It documents the creative unconscious of six cities through dispatches, field notes, and editorial fragments.',
         ],
+      },
+      {
+        id: 'positioning',
+        title: 'Strategic Positioning',
+        type: 'callout',
+        calloutTitle: 'By Invitation, Not by Application',
+        calloutBody:
+          'Velvet Rouge is deliberately inaccessible. No signup, no app store, no marketing. The network is extended, coordinate by coordinate, between those who already hold the thread. Scarcity is the product. Exclusivity is the feature. "If your city belongs to the conversation, you will be found."',
+        calloutType: 'info',
       },
       {
         id: 'competitive-landscape',
@@ -40,35 +47,26 @@ export const velvetRougeDocs: DocContent[] = [
         type: 'card-grid',
         cards: [
           {
-            title: 'Streetwear Giants',
+            title: 'Creative Publications',
             description:
-              'Supreme, Palace, Off-White — established players with loyal followings but premium price points. Velvet Rouge competes on cultural authenticity and music community roots.',
+              'Magazines and digital publications (032c, Kinfolk, Apartamento) document culture but are media brands, not networks. Velvet Rouge is a network that publishes, not a publisher with a network.',
           },
           {
-            title: 'Music Merchandise',
+            title: 'Private Members Clubs',
             description:
-              'Artist merch stores — authentic but limited to individual fan bases. Velvet Rouge builds a brand identity beyond any single artist.',
+              'Soho House, The Wing offer physical spaces but are hospitality brands with real estate. Velvet Rouge has no physical location — it exists between cities, not within them.',
           },
           {
-            title: 'Lifestyle Brands',
+            title: 'Social Platforms',
             description:
-              'Aimé Leon Dore, Kith, Noah — premium casual wear with strong brand identity. Velvet Rouge differentiates through direct music community integration.',
+              'Instagram, Are.na, Discord connect creators but are optimized for engagement, not observation. Velvet Rouge does not optimize for retention or growth.',
           },
           {
-            title: 'Digital-First Brands',
+            title: 'Cultural Institutions',
             description:
-              'Emerging DTC brands with social media focus — lower barriers but weak cultural foundations. Velvet Rouge\'s music roots provide lasting differentiation.',
+              'Museums, foundations, and biennials document culture institutionally. Velvet Rouge operates outside institutional frameworks — faster, more personal, more nocturnal.',
           },
         ],
-      },
-      {
-        id: 'opportunity',
-        title: 'Market Opportunity',
-        type: 'callout',
-        calloutTitle: '$45B Streetwear Market',
-        calloutBody:
-          'The global streetwear market is valued at $45B+ and growing 8% annually. The intersection of music culture and fashion represents the fastest-growing segment, driven by the cultural influence of hip-hop, electronic, and indie music scenes.',
-        calloutType: 'success',
       },
     ],
   },
@@ -79,49 +77,43 @@ export const velvetRougeDocs: DocContent[] = [
     ventureLabel: 'Velvet Rouge',
     ventureSlug: 'velvet-rouge',
     description:
-      'Complete brand strategy including positioning, identity, voice, and visual guidelines.',
+      'Brand strategy, identity, and positioning for Velvet Rouge — the invitation-only global creative network.',
     readingTime: '6 min read',
-    lastUpdated: 'Mar 2026',
+    lastUpdated: 'Jul 2026',
     tags: ['Brand Strategy', 'Identity', 'Positioning'],
     sections: [
       {
-        id: 'brand-positioning',
-        title: 'Brand Positioning',
+        id: 'brand-essence',
+        title: 'Brand Essence',
         type: 'quote',
         quote:
-          'Velvet Rouge is the canvas between sound and style. Born in the studio, worn on the street.',
-        quoteAttr: 'Brand Essence',
+          'There is something quietly happening across the world\'s most creative cities. An invisible thread connects them. We do not explain the thread. We only hold it.',
+        quoteAttr: 'Velvet Rouge — Vol. II',
       },
       {
         id: 'brand-pillars',
         title: 'Core Brand Pillars',
         type: 'card-grid',
-        body: ['Velvet Rouge stands on five foundational pillars that guide every creative and business decision.'],
         cards: [
           {
-            title: 'Musical Authenticity',
+            title: 'Invisible Connection',
             description:
-              'Every design is inspired by music culture — the textures of a studio session, the energy of a live show, the precision of a mastered track.',
+              'The thread between creative cities is never explained — only felt. Velvet Rouge holds the thread without defining it. Mystery is not a tactic; it is the product.',
           },
           {
-            title: 'Creative Community',
+            title: 'Nocturnal Observation',
             description:
-              'Built by and for the creative class: musicians, producers, DJs, visual artists, and the people who move in their world.',
+              'The network publishes for the hours when cities stop performing and begin remembering. Between 03:00 and 04:00, a city is most itself. This is the hour Velvet Rouge belongs to.',
           },
           {
-            title: 'Premium Craft',
+            title: 'Curated Scarcity',
             description:
-              'Quality that respects the creative process. Materials, construction, and details that meet the standard of professional tools.',
+              'Nothing is announced. Everything is implied. The network is extended by invitation only. Scarcity creates signal. There is no growth target, no engagement metric, no funnel.',
           },
           {
-            title: 'Cultural Relevance',
+            title: 'Creative Citizenship',
             description:
-              'Connected to the pulse of music, art, and fashion culture. Not chasing trends — setting the context for them.',
-          },
-          {
-            title: 'Uncompromising Identity',
-            description:
-              'Velvet Rouge doesn\'t follow fashion calendars or trend forecasts. The brand moves at the speed of culture.',
+              'To belong to Velvet Rouge is not to consume content but to inhabit a coordinate. Membership is not transactional — it is cultural. You are found, not acquired.',
           },
         ],
       },
@@ -130,22 +122,24 @@ export const velvetRougeDocs: DocContent[] = [
         title: 'Visual Identity Guidelines',
         type: 'list',
         items: [
-          'Color palette: Deep burgundy (#6B1D3A) primary, warm charcoal (#2A2A2A) secondary, cream (#F5F0E8) accent',
-          'Typography: Mixed serif/sans-serif system — serif for narrative and headers, sans-serif for technical and product',
-          'Tone: Warm, confident, understated. Speaks to the initiated creative, not the mass market.',
-          'Imagery: Candid studio photography, warm tones, focus on process and texture over polished final shots',
-          'Signature element: Velvet drape motif — a visual reference to both the brand name and the studio curtain',
+          'Typography: Minimal serif/sans-serif system with Japanese and Korean character support across six languages',
+          'Color: Monochromatic with deep burgundy accent (#6B1D3A). No gradient, no glow, no decorative excess.',
+          'Tone: Poetic but precise. Every word carries weight. "The night does not arrive. It accumulates."',
+          'Imagery: No photography of people. Architecture, light, urban texture, negative space. Cities without their inhabitants.',
+          'Format: Publication-like. Volumes, chapters, field notes, dispatches. Not posts, not articles — objects.',
         ],
       },
       {
-        id: 'brand-evolution',
-        title: 'Brand Evolution Roadmap',
+        id: 'the-six-cities',
+        title: 'The Six Coordinates',
         type: 'timeline',
         items: [
-          'Phase 1 (Current) — Brand foundation: visual identity, voice, initial product line, community building',
-          'Phase 2 — Product expansion: full apparel line, accessories, limited collaborations',
-          'Phase 3 — Cultural presence: flagship events, artist partnerships, creative residency program',
-          'Phase 4 — Lifestyle ecosystem: expanded categories, digital experiences, creative tools and resources',
+          '01 — Mexico City (19.43°N · 99.13°W): North America. Reforma at altitude. The warm windows counting upward.',
+          '02 — Tokyo (35.68°N · 139.69°E): East Asia. Red signage, rain, and the long pause between two reflections.',
+          '03 — Seoul (37.56°N · 126.97°E): East Asia. Glass, signage, and the shape of the city after midnight.',
+          '04 — Berlin (52.52°N · 13.40°E): Europe. Concrete that keeps the cold the way memory keeps a voice.',
+          '05 — Los Angeles (34.05°N · 118.24°W): North America. Palms holding silhouettes as the hills switch on.',
+          '06 — Shanghai (31.23°N · 121.47°E): East Asia. The river as mirror, towers not yet stepped out of fog.',
         ],
       },
     ],
@@ -157,55 +151,54 @@ export const velvetRougeDocs: DocContent[] = [
     ventureLabel: 'Velvet Rouge',
     ventureSlug: 'velvet-rouge',
     description:
-      'Creative vision, design philosophy, and artistic direction for Velvet Rouge collections and campaigns.',
+      'Creative vision, editorial direction, and content philosophy for the Velvet Rouge global creative network.',
     readingTime: '5 min read',
-    lastUpdated: 'Mar 2026',
+    lastUpdated: 'Jul 2026',
     tags: ['Creative Direction', 'Design', 'Artistic Vision'],
     sections: [
       {
-        id: 'design-philosophy',
-        title: 'Design Philosophy',
+        id: 'editorial-philosophy',
+        title: 'Editorial Philosophy',
         type: 'text',
         body: [
-          'Velvet Rouge\'s creative direction draws from a simple premise: the best fashion, like the best music, comes from the intersection of technical precision and emotional intuition. Every design starts with a sonic reference — a texture, a rhythm, a mood — and translates it into form, fabric, and silhouette.',
-          'This translation from sound to style is the brand\'s creative signature. A track\'s bassline becomes a silhouette\'s structure. A vocal texture inspires a fabric choice. The energy of a live set drives a collection\'s color palette.',
+          'Velvet Rouge is a living editorial. It does not report. It observes — and lets you overhear. The content is not generated; it is collected. Each dispatch, field note, and observation is a fragment of a city thinking aloud in the dark.',
+          'The archive grows slowly — one observation at a time. These are not posts. They are objects, gathered the way a publication gathers its quietest pages.',
         ],
       },
       {
-        id: 'collection-framework',
-        title: 'Collection Framework',
+        id: 'content-format',
+        title: 'Content Architecture',
         type: 'card-grid',
         cards: [
           {
-            title: 'Studio Collection',
+            title: 'Night Notes',
             description:
-              'Essentials for the creative process. Comfortable, durable, functional pieces designed for long studio sessions and late-night sessions.',
+              'The margin of the publication — where the editors think aloud. Vol. II — No. 003: "The night does not arrive. It accumulates — first in the windows, then in the streets, then in the way a city begins to listen to itself."',
           },
           {
-            title: 'Stage Collection',
+            title: 'Field Observations',
             description:
-              'Bold silhouettes for the spotlight. Statement pieces that command attention in the booth, on the stage, and in the frame.',
+              'Cultural signals filed from across the network — not as data, but as observation. "Tokyo, somewhere past midnight: a single window still lit on the forty-second floor. Someone is still building something no one will see tonight."',
           },
           {
-            title: 'Street Collection',
+            title: 'The Archive',
             description:
-              'Everyday luxury for the creative class. Refined basics that bridge studio, street, and social — worn by artists, designed for everyone.',
+              'Collected fragments with reference codes. Field Note A—01: "On the architecture of waiting. Every city has a building where people wait for something that has already happened. We collect them."',
           },
           {
-            title: 'Collaboration Collection',
+            title: 'Night Collection',
             description:
-              'Limited drops with artists, producers, and creative partners. Each collaboration is a unique intersection of two creative worlds.',
+              'A running collection — one window, per city, per night, still burning past midnight. The inventory of the unfinished. Ongoing, never complete.',
           },
         ],
       },
       {
-        id: 'campaign-aesthetic',
-        title: 'Campaign Aesthetic',
-        type: 'callout',
-        calloutTitle: 'Process Over Polish',
-        calloutBody:
-          'Velvet Rouge campaigns reject the glossy, over-produced fashion editorial aesthetic in favor of candid, process-focused imagery. Think studio session photography, not runway shows. The brand captures creators in their natural environment — making music, building ideas, living the creative life.',
-        calloutType: 'info',
+        id: 'creative-philosophy',
+        title: 'Creative Philosophy',
+        type: 'quote',
+        quote:
+          'We collect cities the way others collect objects — for the feeling they leave in the room after you have left. Velvet Rouge is the room.',
+        quoteAttr: 'Curator\'s Note — V.R.',
       },
     ],
   },
@@ -216,70 +209,55 @@ export const velvetRougeDocs: DocContent[] = [
     ventureLabel: 'Velvet Rouge',
     ventureSlug: 'velvet-rouge',
     description:
-      'Detailed audience personas that guide Velvet Rouge\'s product design, marketing, and community strategy.',
-    readingTime: '5 min read',
-    lastUpdated: 'Mar 2026',
-    tags: ['Personas', 'Audience', 'Marketing'],
+      'The Velvet Rouge member — not a user profile, but a creative disposition. The network does not have target demographics; it has coordinates.',
+    readingTime: '4 min read',
+    lastUpdated: 'Jul 2026',
+    tags: ['Personas', 'Audience', 'Creative Network'],
     sections: [
       {
-        id: 'persona-musician',
-        title: 'Persona: The Working Musician',
+        id: 'member-philosophy',
+        title: 'On Membership',
+        type: 'arch',
+        body: [
+          'Velvet Rouge does not define audience personas in the traditional sense. The network has no target demographic, no age range, no income bracket. Membership is determined by creative disposition — a way of seeing the world that aligns with the network\'s nocturnal, observational, anti-commercial ethos.',
+          'The network\'s members are found, not acquired. They belong to creative cities — whether they live in them or simply recognize themselves in the observation of them.',
+        ],
+      },
+      {
+        id: 'member-types',
+        title: 'Creative Dispositions',
         type: 'card-grid',
-        body: ['Meet Jordan. 28-year-old producer and touring musician. Spends 60 hours a week in the studio or on the road. Needs clothing that works as hard as they do.'],
         cards: [
           {
-            title: 'Needs',
-            description: 'Durable, comfortable clothing for long sessions. Pieces that transition from studio to stage to street.',
+            title: 'The Night Observer',
+            description:
+              'Someone who has noticed that cities change after midnight. They collect windows still lit, streets after rain, the sound of a city listening to itself. They recognize themselves in Field Note A—02: "Between three and four, a city stops performing and begins remembering."',
           },
           {
-            title: 'Pain Points',
-            description: 'Most "creative" fashion is impractical for actual creative work. Streetwear lacks durability. Tailored clothing is too formal.',
+            title: 'The Thread Holder',
+            description:
+              'A creative professional who moves between cities — artist, writer, architect, curator — and has felt the invisible connection between Mexico City\'s energy and Berlin\'s silence. They understand that the network describes something they already experience.',
           },
           {
-            title: 'Velvet Rouge Fit',
-            description: 'Studio Collection essentials built for the creative workflow. Technical fabrics with premium aesthetics.',
+            title: 'The Cultural Archivist',
+            description:
+              'Someone who documents what commercial platforms miss. They keep records of places, moments, and atmospheres that have no economic value but immense cultural weight. The Archive speaks their language.',
+          },
+          {
+            title: 'The Quiet Builder',
+            description:
+              'The person still working at 3:00 AM on something no one will see tonight. They are not seeking recognition — they are seeking the recognition of being understood. Velvet Rouge\'s Night Collection is their inventory.',
           },
         ],
       },
       {
-        id: 'persona-creative',
-        title: 'Persona: The Creative Professional',
-        type: 'card-grid',
-        body: ['Meet Alex. 32-year-old creative director at a design agency. Lives at the intersection of music, art, fashion, and culture. Curates their appearance as carefully as their playlist.'],
-        cards: [
-          {
-            title: 'Needs',
-            description: 'Distinctive pieces that signal cultural fluency without being logo-heavy. Quality that clients respect and peers notice.',
-          },
-          {
-            title: 'Pain Points',
-            description: 'Luxury brands lack cultural credibility. Streetwear brands lack refinement. No brand speaks to their specific creative identity.',
-          },
-          {
-            title: 'Velvet Rouge Fit',
-            description: 'Street Collection refined basics with design details that reward close attention. The brand identity signals belonging to the creative class.',
-          },
-        ],
-      },
-      {
-        id: 'persona-collector',
-        title: 'Persona: The Culture Collector',
-        type: 'card-grid',
-        body: ['Meet Sam. 26-year-old DJ and vinyl collector. Deeply invested in music culture as identity. Seeks brands that understand and respect the culture.'],
-        cards: [
-          {
-            title: 'Needs',
-            description: 'Limited-edition drops with cultural significance. Pieces that tell a story and connect to music history.',
-          },
-          {
-            title: 'Pain Points',
-            description: 'Brands co-opt music culture without understanding it. Merchandise from artists they love lacks design quality.',
-          },
-          {
-            title: 'Velvet Rouge Fit',
-            description: 'Collaboration Collection drops with real artists. Each piece connected to a specific musical reference or creative partnership.',
-          },
-        ],
+        id: 'not-for',
+        title: 'Who Velvet Rouge Is Not For',
+        type: 'callout',
+        calloutTitle: 'Deliberately Exclusive',
+        calloutBody:
+          'Velvet Rouge is not for tourists, not for collectors, not for influencers, not for brands seeking cultural adjacency, not for algorithms. It is not optimized for growth, retention, or monetization. It exists for those who already hold the thread — and can only be found by them.',
+        calloutType: 'info',
       },
     ],
   },
@@ -290,66 +268,51 @@ export const velvetRougeDocs: DocContent[] = [
     ventureLabel: 'Velvet Rouge',
     ventureSlug: 'velvet-rouge',
     description:
-      'Community-building strategy that places Velvet Rouge at the center of the creative ecosystem.',
+      'The Velvet Rouge community model — not a platform, not a membership, but an invisible network extended by invitation and maintained through observation.',
     readingTime: '5 min read',
-    lastUpdated: 'Mar 2026',
-    tags: ['Community', 'Strategy', 'Growth'],
+    lastUpdated: 'Jul 2026',
+    tags: ['Community', 'Strategy', 'Creative Network'],
     sections: [
       {
-        id: 'community-vision',
-        title: 'Community Vision',
-        type: 'quote',
-        quote:
-          'Velvet Rouge isn\'t a clothing brand with a community — it\'s a creative community that makes clothing.',
-        quoteAttr: 'Community Philosophy',
-      },
-      {
-        id: 'community-pillars',
-        title: 'Community Pillars',
-        type: 'card-grid',
-        cards: [
-          {
-            title: 'Creative Residency',
-            description:
-              'Quarterly residency program supporting emerging artists, producers, and visual creators with space, resources, and exposure.',
-          },
-          {
-            title: 'Studio Sessions',
-            description:
-              'Intimate live events and studio sessions connecting brand community members with artists. Priority access for Velvet Rouge customers.',
-          },
-          {
-            title: 'Digital Salon',
-            description:
-              'Online community space for creative discussion, collaboration, and feedback. Not a typical brand social feed — a genuine creative network.',
-          },
-          {
-            title: 'Artist Collaborations',
-            description:
-              'Co-created limited collections with community artists. Revenue share model that directly supports creative partners.',
-          },
+        id: 'community-philosophy',
+        title: 'Community as Coordinate',
+        type: 'text',
+        body: [
+          'Velvet Rouge inverts the standard community model. Most communities optimize for size, engagement, and retention. Velvet Rouge optimizes for signal density, creative alignment, and the quality of silence between observations.',
+          'The network is not a platform where members interact. It is a publication they receive — dispatches from six cities, filed by editors who move between them. The community is not in the comments section. It is in the shared experience of receiving the same observation at 3:00 AM in different time zones.',
         ],
       },
       {
-        id: 'growth-mechanics',
-        title: 'Community Growth Mechanics',
+        id: 'network-mechanics',
+        title: 'Network Mechanics',
         type: 'list',
         items: [
-          'Invite-based access: Velvet Rouge community is curated, not open. Membership signals creative belonging.',
-          'Artist-to-fan network: artists in the community bring their audiences, creating organic growth',
-          'Exclusive drops: community members get early access to limited collections and collaborations',
-          'Creative portfolio showcase: members featured on brand platforms, events, and campaigns',
+          'Invitation-only: The network is extended, coordinate by coordinate. No application, no waitlist, no signup.',
+          'Observe, don\'t engage: Velvet Rouge does not facilitate discussion, comments, or user-generated content. The value is in receiving, not posting.',
+          'Rotating coordinate: The network moves once a year, across the globe. Each city hosts a moment of convergence.',
+          'Publication rhythm: Dispatches arrive without schedule. The network does not optimize for frequency. Silence between observations is intentional.',
         ],
       },
       {
-        id: 'measurement',
-        title: 'Measuring Community Health',
-        type: 'metrics',
-        metrics: [
-          { value: '50K+', label: 'Community members (target Year 1)' },
-          { value: '40%+', label: 'Monthly active engagement rate' },
-          { value: '3:1', label: 'Member-to-ambassador conversion ratio' },
-          { value: '15%', label: 'Member-driven revenue contribution' },
+        id: 'growth-philosophy',
+        title: 'Anti-Growth Strategy',
+        type: 'callout',
+        calloutTitle: 'Scarcity by Design',
+        calloutBody:
+          'Velvet Rouge has no growth target, no engagement metric, no conversion funnel. If the network grows, it grows because those who hold the thread extend it to someone who already belongs to the same invisible whole. The network does not market itself. It reveals itself — slowly, coordinate by coordinate.',
+        calloutType: 'success',
+      },
+      {
+        id: 'city-coordinates',
+        title: 'Current Coordinates',
+        type: 'timeline',
+        items: [
+          'Mexico City — North America (19.43°N · 99.13°W): The warm windows counting upward. Everyone still awake and still building.',
+          'Tokyo — East Asia (35.68°N · 139.69°E): Signage thinned to its true alphabet. Red, rain, and the long pause.',
+          'Seoul — East Asia (37.56°N · 126.97°E): The city thinned to its true shape. Glass, signage, and reflection.',
+          'Berlin — Europe (52.52°N · 13.40°E): The creative district not sleeping — listening.',
+          'Los Angeles — North America (34.05°N · 118.24°W): Palms holding silhouettes as dusk finishes leaving.',
+          'Shanghai — East Asia (31.23°N · 121.47°E): The future loudest just before it decides to be quiet.',
         ],
       },
     ],
@@ -361,59 +324,61 @@ export const velvetRougeDocs: DocContent[] = [
     ventureLabel: 'Velvet Rouge',
     ventureSlug: 'velvet-rouge',
     description:
-      'Investor and partner pitch deck for Velvet Rouge — the premium creative lifestyle brand.',
+      'Velvet Rouge is not a pitch. It is a network that extends by invitation. This document exists for those who already hold the thread.',
     readingTime: '3 min read',
-    lastUpdated: 'Mar 2026',
-    tags: ['Pitch Deck', 'Investor', 'Presentation'],
+    lastUpdated: 'Jul 2026',
+    tags: ['Pitch Deck', 'Creative Network', 'Presentation'],
     sections: [
       {
-        id: 'problem-slide',
-        title: 'The Problem',
-        type: 'callout',
-        calloutTitle: 'No Brand Speaks to the Creative Class',
-        calloutBody:
-          'Luxury brands lack cultural credibility. Streetwear brands lack refinement. Music merchandise lacks design quality. Creative professionals have no brand that represents their identity.',
-        calloutType: 'warning',
-      },
-      {
-        id: 'solution-slide',
-        title: 'The Solution',
-        type: 'text',
+        id: 'what-it-is',
+        title: 'What Velvet Rouge Is',
+        type: 'arch',
         body: [
-          'Velvet Rouge is the first premium brand built by and for the music creative class. Rooted in studio culture, designed for the creative workflow, and elevated through community-driven collaboration.',
-          'Not another streetwear label — a creative ecosystem that produces fashion, experiences, and cultural infrastructure for the creative community.',
+          'Velvet Rouge is not a brand, not an event, not a place. It is a private network drawn between six cities — a single coordinate of culture that moves, once a year, across the globe. Nothing is announced. Everything is implied.',
+          'It connects the world\'s most creative capitals through observation, not interaction. Through dispatches, not posts. Through the quality of attention, not the quantity of engagement.',
         ],
       },
       {
-        id: 'market',
-        title: 'Market Opportunity',
+        id: 'the-six-cities',
+        title: 'The Six Coordinates',
         type: 'metrics',
         metrics: [
-          { value: '$45B+', label: 'Streetwear market' },
-          { value: '8%', label: 'Annual growth rate' },
-          { value: '22-35', label: 'Primary demographic' },
-          { value: '60M+', label: 'Global creative class' },
+          { value: '01', label: 'Mexico City · 19.43°N' },
+          { value: '02', label: 'Tokyo · 35.68°N' },
+          { value: '03', label: 'Seoul · 37.56°N' },
+          { value: '04', label: 'Berlin · 52.52°N' },
+          { value: '05', label: 'Los Angeles · 34.05°N' },
+          { value: '06', label: 'Shanghai · 31.23°N' },
         ],
       },
       {
-        id: 'traction',
-        title: 'Traction & Milestones',
-        type: 'timeline',
+        id: 'what-it-is-not',
+        title: 'What Velvet Rouge Is Not',
+        type: 'list',
         items: [
-          'Phase 1 — Brand identity development and creative direction',
-          'Phase 2 — Initial product line design and sampling',
-          'Phase 3 — Community building: creative network establishment',
-          'Phase 4 — Limited drop launch and brand activation',
+          'Not a brand — it does not sell products, experiences, or memberships',
+          'Not an event — it has no calendar, no schedule, no programming',
+          'Not a place — it has no physical location, no headquarters, no venue',
+          'Not a platform — it does not facilitate interaction, comments, or user content',
+          'Not a publication — it publishes, but publishing is a function of the network, not its purpose',
         ],
       },
       {
-        id: 'ask',
-        title: 'The Ask',
+        id: 'the-thread',
+        title: 'The Thread',
+        type: 'quote',
+        quote:
+          'There is something quietly happening across the world\'s most creative cities. An invisible thread connects them. We do not explain the thread. We only hold it.',
+        quoteAttr: 'Velvet Rouge — Est. MMXXV',
+      },
+      {
+        id: 'coordinate',
+        title: 'For Those Who Hold the Thread',
         type: 'callout',
-        calloutTitle: 'Building the Creative Brand of a Generation',
+        calloutTitle: 'By Invitation',
         calloutBody:
-          'Seeking creative partnerships with artists, producers, and cultural institutions. Also exploring strategic investment for collection production, community platform development, and brand launch campaign.',
-        calloutType: 'success',
+          'The network is not open. It is extended, coordinate by coordinate, between those who already hold the thread. If your city belongs to the conversation, you will be found. Velvet Rouge · A Global Creative Network · © MMXXVI — By Invitation.',
+        calloutType: 'info',
       },
     ],
   },

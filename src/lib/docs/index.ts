@@ -27,7 +27,7 @@ export const docVentures: DocVenture[] = [
     id: 'yami',
     name: 'YAMI',
     description:
-      'AI music intelligence platform that helps independent artists understand, analyze, and evolve their sound. 8 documents spanning strategy through architecture.',
+      'Preventive mental health ecosystem for Mexico. Anonymous screening, AI accompaniment, and community support. 8 documents spanning market research through architecture.',
     docs: yamiDocs.map((d) => ({
       title: d.title,
       slug: d.slug,
@@ -36,9 +36,9 @@ export const docVentures: DocVenture[] = [
   },
   {
     id: 'sonora',
-    name: 'Sonora Music Hub',
+    name: 'Sonora Music Creative Hub',
     description:
-      'AI-powered music production and distribution platform for independent artists. 6 documents covering market analysis, strategy, and launch planning.',
+      '360° physical ecosystem for artist development — from discovery through global scale. 11 interconnected spaces under one roof. 6 documents covering the full blueprint.',
     docs: sonoraDocs.map((d) => ({
       title: d.title,
       slug: d.slug,
@@ -49,7 +49,7 @@ export const docVentures: DocVenture[] = [
     id: 'velvet-rouge',
     name: 'Velvet Rouge',
     description:
-      'Premium creative and lifestyle brand at the intersection of music, fashion, and culture. 6 documents covering brand strategy, creative direction, and community.',
+      'Invitation-only global creative network connecting six cities. A private cultural observation platform — not a brand, not an event, not a place. 6 documents.',
     docs: velvetRougeDocs.map((d) => ({
       title: d.title,
       slug: d.slug,
