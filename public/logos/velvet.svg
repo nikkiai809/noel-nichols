@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 340 80" fill="none">
+  <style>
+    .vr-wordmark { font-family: 'Playfair Display', Georgia, 'Times New Roman', serif; }
+  </style>
+  <!-- Thin vertical rule like the site's aesthetic -->
+  <line x1="0" y1="12" x2="0" y2="68" stroke="#5e1018" stroke-width="1.2" opacity="0.25"/>
+  <!-- Wordmark in serif, widely tracked, matching the hero treatment -->
+  <text x="20" y="46" font-family="'Playfair Display', Georgia, 'Times New Roman', serif" font-weight="400" font-size="30" fill="currentColor" letter-spacing="0.35em">Velvet Rouge</text>
+  <!-- Subtitle with wide tracking -->
+  <text x="20" y="62" font-family="Inter, 'SF Pro', system-ui, sans-serif" font-weight="400" font-size="8" fill="#5e1018" letter-spacing="0.4em" opacity="0.6">GLOBAL CREATIVE NETWORK</text>
+</svg>

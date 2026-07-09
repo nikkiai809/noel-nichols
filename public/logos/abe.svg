@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 80" fill="none">
+  <defs>
+    <linearGradient id="abe-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0ea5e9"/>
+      <stop offset="100%" stop-color="#06b6d4"/>
+    </linearGradient>
+  </defs>
+  <rect x="8" y="20" width="40" height="40" rx="8" fill="url(#abe-grad)"/>
+  <text x="28" y="47" font-family="Inter, sans-serif" font-weight="700" font-size="18" fill="white" text-anchor="middle">AB</text>
+  <text x="60" y="47" font-family="Inter, sans-serif" font-weight="700" font-size="20" fill="currentColor" letter-spacing="-0.3">ABE Music Hub</text>
+  <text x="60" y="60" font-family="Inter, sans-serif" font-weight="400" font-size="9" fill="#8e8e93" letter-spacing="1.5">360° LABEL OPERATING SYSTEM</text>
+</svg>

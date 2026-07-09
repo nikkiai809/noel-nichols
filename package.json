@@ -1,0 +1,26 @@
+{
+  "name": "portfolio-v2",
+  "version": "2.0.0",
+  "private": true,
+  "description": "Noel Nichols — AI Product Builder & Founder. Premium dark portfolio.",
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "next": "^15.3.1",
+    "react": "^19.1.0",
+    "react-dom": "^19.1.0",
+    "motion": "^12.7.4"
+  },
+  "devDependencies": {
+    "@tailwindcss/postcss": "^4.1.4",
+    "tailwindcss": "^4.1.4",
+    "typescript": "^5.8.3",
+    "@types/node": "^22.14.1",
+    "@types/react": "^19.1.2",
+    "@types/react-dom": "^19.1.2"
+  }
+}
