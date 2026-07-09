@@ -372,18 +372,74 @@ export default function HomePage() {
       <section id="writing" className="section anchor-offset">
         <div className="container-wide px-6 md:px-8 lg:px-12">
           <div className="divider mb-16 md:mb-24" />
-          <div className="max-w-4xl text-left">
+          <div className="max-w-4xl mb-16 md:mb-20 text-left">
             <p className="text-xs text-muted-foreground font-mono mb-4 tracking-wider uppercase">
               Writing
             </p>
             <h2 className="text-3xl sm:text-4xl md:text-5xl font-semibold tracking-tight mb-6">
-              Thoughts on building products at the intersection of AI, music, and creativity.
+              Philosophy, case studies, and observations from building at the edge of AI and creativity.
             </h2>
-            <p className="text-muted-foreground text-lg leading-relaxed max-w-2xl">
-              Essays, case studies, and observations on product development,
-              AI infrastructure, creative economies, and the future of music
-              technology. Coming soon.
-            </p>
+          </div>
+
+          <div className="space-y-12 md:space-y-16 max-w-4xl text-left">
+            {/* Article 1 */}
+            <article className="border-t border-border pt-8">
+              <p className="text-xs text-muted-foreground font-mono mb-3">2026 · Case Study</p>
+              <h3 className="text-xl sm:text-2xl font-semibold tracking-tight mb-3">
+                Building Native Agent OS: 155 MCP Tools, 0 Failures
+              </h3>
+              <p className="text-sm text-muted-foreground leading-relaxed max-w-2xl">
+                How Spec-Driven Development enabled us to build a multi-agent AI operating system with 535 passing tests,
+                6 agents, and 128 skills — from day one. The architecture, the methodology, and the lessons learned
+                scaling MCP-native infrastructure across four products simultaneously.
+              </p>
+            </article>
+
+            {/* Article 2 */}
+            <article className="border-t border-border pt-8">
+              <p className="text-xs text-muted-foreground font-mono mb-3">2026 · Philosophy</p>
+              <h3 className="text-xl sm:text-2xl font-semibold tracking-tight mb-3">
+                The Product Builder&apos;s Creed
+              </h3>
+              <p className="text-sm text-muted-foreground leading-relaxed max-w-2xl">
+                On the discipline of taking products from zero to deployed. Why I believe spec-first development
+                is the only way to build reliable AI products. Why ambiguity is the enemy of quality.
+                And why the gap between vision and execution defines the builder.
+              </p>
+            </article>
+
+            {/* Article 3 */}
+            <article className="border-t border-border pt-8">
+              <p className="text-xs text-muted-foreground font-mono mb-3">2026 · Essay</p>
+              <h3 className="text-xl sm:text-2xl font-semibold tracking-tight mb-3">
+                AI Infrastructure Is the New Label Infrastructure
+              </h3>
+              <p className="text-sm text-muted-foreground leading-relaxed max-w-2xl">
+                The music industry is undergoing a quiet infrastructure revolution. From decision intelligence
+                platforms to preventive mental health ecosystems, the products that will define the next decade
+                are being built at the intersection of AI agents and creative economies. A look at what&apos;s
+                emerging and why it matters.
+              </p>
+            </article>
+
+            {/* Article 4 */}
+            <article className="border-t border-border pt-8">
+              <p className="text-xs text-muted-foreground font-mono mb-3">2025 · Case Study</p>
+              <h3 className="text-xl sm:text-2xl font-semibold tracking-tight mb-3">
+                From Concept to Deployment: Building SIGNAL for the Music Industry
+              </h3>
+              <p className="text-sm text-muted-foreground leading-relaxed max-w-2xl">
+                The full journey of building an AI-powered decision intelligence platform for record labels.
+                From market research with label executives through architecture design, 9 MCP server deployment,
+                and beta launch. How executive dashboard design thinking shaped every product decision.
+              </p>
+            </article>
+
+            {/* More coming */}
+            <div className="border-t border-border pt-8 flex items-center gap-3 text-sm text-muted-foreground">
+              <span className="w-4 h-px bg-muted-foreground/30" />
+              More essays and case studies forthcoming
+            </div>
           </div>
         </div>
       </section>
@@ -394,7 +450,7 @@ export default function HomePage() {
           <div className="divider mb-16 md:mb-24" />
           <div className="max-w-4xl text-left">
             <p className="text-xs text-muted-foreground font-mono mb-4 tracking-wider uppercase">
-              Get in touch
+              Contacto
             </p>
             <h2 className="text-3xl sm:text-4xl md:text-5xl font-semibold tracking-tight mb-8">
               Building something interesting? Let&apos;s talk.
@@ -405,18 +461,18 @@ export default function HomePage() {
               leadership — I&apos;d like to hear about what you&apos;re building.
             </p>
 
-            <div className="flex flex-wrap gap-4">
+            <div className="flex flex-wrap items-center gap-4">
               <a
                 href="mailto:hello@noelnichols.com"
-                className="inline-flex items-center gap-2 px-6 py-3 bg-foreground text-background rounded-full text-sm font-medium hover:opacity-80 transition-all"
+                className="inline-flex items-center justify-center gap-2 px-8 py-3.5 bg-foreground text-background rounded-full text-sm font-semibold hover:opacity-80 transition-all min-w-[160px]"
               >
-                hello@noelnichols.com <ArrowUpRight className="h-4 w-4" />
+                CONTACTO
               </a>
               <a
                 href="https://linkedin.com/in/noelnichols1934"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 px-6 py-3 border border-border rounded-full text-sm text-muted-foreground hover:text-foreground hover:border-foreground transition-all"
+                className="inline-flex items-center gap-2 px-6 py-3.5 border border-border rounded-full text-sm text-muted-foreground hover:text-foreground hover:border-foreground transition-all"
               >
                 LinkedIn <ArrowUpRight className="h-4 w-4" />
               </a>
@@ -424,7 +480,7 @@ export default function HomePage() {
                 href="https://github.com/nikkiai809"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 px-6 py-3 border border-border rounded-full text-sm text-muted-foreground hover:text-foreground hover:border-foreground transition-all"
+                className="inline-flex items-center gap-2 px-6 py-3.5 border border-border rounded-full text-sm text-muted-foreground hover:text-foreground hover:border-foreground transition-all"
               >
                 GitHub <ArrowUpRight className="h-4 w-4" />
               </a>
