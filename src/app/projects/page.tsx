@@ -11,14 +11,14 @@ export default function ProjectsPage() {
     <>
       <Container className="pt-32 md:pt-40">
         <div className="mb-16">
-          <SectionLabel>Portfolio</SectionLabel>
+          <SectionLabel>Ventures</SectionLabel>
           <FadeIn>
             <h1 className="text-3xl md:text-5xl font-semibold text-[var(--color-fg)] mb-4">
-              Products I&apos;ve Built
+              Startup Ecosystem
             </h1>
             <p className="text-sm text-[var(--color-fg-muted)] max-w-lg leading-relaxed">
-              A collection of AI-powered platforms, digital products, and ventures —
-              each representing a complete journey from opportunity to execution.
+              Companies founded from zero. Each venture represents complete ownership —
+              market discovery, product strategy, AI architecture, engineering, and launch.
             </p>
           </FadeIn>
         </div>

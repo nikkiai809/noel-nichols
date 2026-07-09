@@ -1,10 +1,10 @@
-import type { NavItem, Article, Capability, RecruiterInfo, EngineeringPrinciple, GitHubRepo, CurrentlyBuilding, HowWorkStep } from '@/types';
+import type { NavItem, Article, Capability, RecruiterInfo, EngineeringPrinciple, GitHubRepo, CurrentlyBuilding, HowWorkStep, FounderMetric, FounderTimelineEvent } from '@/types';
 
 export const SITE = {
   name: 'Noel Nichols',
-  title: 'Founding AI Engineer / AI Product Builder',
+  title: 'Founder / AI Product Builder / Founding Engineer',
   description:
-    'I build AI products that transform complex business problems into production-ready software. Multi-agent architectures, MCP servers, RAG pipelines, and full-stack AI systems.',
+    'I build companies that solve real problems with AI. Multi-agent architectures, production systems, and ventures launched from zero.',
   url: 'https://noel-nichols.vercel.app',
   email: 'noelnichols00@gmail.com',
   social: {
@@ -14,8 +14,8 @@ export const SITE = {
 } as const;
 
 export const RECRUITER_INFO: RecruiterInfo[] = [
-  { label: 'Role', value: 'Founding AI Engineer / AI Product Builder' },
-  { label: 'Focus', value: 'AI Systems, Automation, Product Engineering' },
+  { label: 'Role', value: 'Founder / AI Product Builder / Founding Engineer' },
+  { label: 'Focus', value: 'AI Ventures, Multi-Agent Systems, Product Engineering' },
   { label: 'Stack', value: 'Python, TypeScript, Next.js, MCP, RAG, LLMs' },
   { label: 'Location', value: 'Remote / Americas' },
   { label: 'Availability', value: 'Open — Founding Engineer, AI Product, Product Engineering' },
@@ -23,32 +23,121 @@ export const RECRUITER_INFO: RecruiterInfo[] = [
 ];
 
 export const NAV_ITEMS: NavItem[] = [
-  { label: 'Projects', href: '/projects' },
+  { label: 'Ventures', href: '/projects' },
   { label: 'Work', href: '/#work' },
   { label: 'About', href: '/#about' },
   { label: 'Contact', href: '/#contact' },
 ];
 
+/* ─── FOUNDER METRICS ─── */
+
+export const FOUNDER_METRICS: FounderMetric[] = [
+  { label: 'Startups Founded', value: '4' },
+  { label: 'AI Platforms Built', value: '5+' },
+  { label: 'Industries Entered', value: '5' },
+  { label: 'End-to-End Products', value: '7+' },
+  { label: 'MCP Servers Built', value: '8+' },
+  { label: 'Automated Tests', value: '382+' },
+];
+
+/* ─── CAPABILITIES (Founder-Framed) ─── */
+
 export const CAPABILITIES: Capability[] = [
   {
-    title: 'AI Engineering',
+    title: 'Venture Creation',
+    description:
+      'Opportunity discovery, market research, product strategy, business modeling, and go-to-market execution for AI-powered ventures from zero.',
+  },
+  {
+    title: 'AI Engineering & Architecture',
     description:
       'Multi-agent architectures, LLM integration, RAG pipelines, MCP servers, vector databases, and production AI systems built from scratch.',
   },
   {
-    title: 'Full-Stack Product Development',
+    title: 'Product Engineering',
     description:
-      'End-to-end product engineering: Next.js, TypeScript, Python, APIs, data pipelines, and cloud infrastructure for AI-powered applications.',
+      'End-to-end product ownership: Next.js, TypeScript, Python, APIs, data pipelines, and cloud infrastructure for AI applications that ship.',
   },
   {
-    title: 'Technical Architecture',
+    title: 'Founder-Level Execution',
     description:
-      'System design for AI products: data ingestion, feature stores, model serving, API design, and scalable cloud deployment.',
+      'Brand strategy, UX/UI, pitch decks, technical planning, team building, and continuous iteration — everything required to launch and grow a venture.',
+  },
+];
+
+/* ─── FOUNDER NARRATIVE ─── */
+
+export const FOUNDER_NARRATIVE: FounderTimelineEvent[] = [
+  {
+    era: '2020',
+    title: 'Engineering Foundations',
+    description: 'Built automation systems that replaced manual processes at scale. Discovered how code transforms business operations.',
+    type: 'technology',
   },
   {
-    title: 'Product Strategy & Execution',
-    description:
-      'From opportunity identification to shipped product. Roadmap planning, MVP delivery, and iterative development with founder-level ownership.',
+    era: '2021',
+    title: 'First AI Products',
+    description: 'Developed predictive models and recommendation engines. First generation of AI-powered applications deployed to production.',
+    type: 'product',
+  },
+  {
+    era: '2022',
+    title: 'Product Strategy',
+    description: 'Transitioned from engineering execution to product ownership. Led full-stack product development from opportunity identification to launch.',
+    type: 'founder',
+  },
+  {
+    era: '2023',
+    title: 'Multi-Agent Architectures',
+    description: 'Architected multi-agent AI systems using MCP, RAG, and memory persistence. Built infrastructure for coordinated AI product ecosystems.',
+    type: 'technology',
+  },
+  {
+    era: '2024',
+    title: 'Founded Sonora Digital Corp',
+    description: 'Launched a venture studio building AI products across music intelligence, health, content, and analytics. 8+ MCP servers in production.',
+    type: 'company',
+  },
+  {
+    era: '2025+',
+    title: 'Multiple Ventures',
+    description: 'Building a portfolio of AI ventures: SIGNAL (music intelligence), YAMI (health), Sonora Brain (infrastructure), and next-generation AI products.',
+    type: 'company',
+  },
+];
+
+/* ─── FOUNDER PROCESS ─── */
+
+export const FOUNDER_PROCESS = [
+  {
+    step: '01',
+    title: 'Market Discovery',
+    description: 'Opportunity identification, market sizing, competitive analysis, and problem validation before any product decisions are made.',
+  },
+  {
+    step: '02',
+    title: 'Product Strategy',
+    description: 'Vision definition, business model design, roadmap planning, and success criteria. Strategy drives architecture, not the other way around.',
+  },
+  {
+    step: '03',
+    title: 'AI Architecture',
+    description: 'System design for AI: data pipelines, model selection, agent coordination, memory systems, API boundaries, and infrastructure decisions.',
+  },
+  {
+    step: '04',
+    title: 'Rapid Execution',
+    description: 'Build the core value first. Tests from day one, CI/CD from commit one, deployment to production before feature completeness.',
+  },
+  {
+    step: '05',
+    title: 'Launch & Iterate',
+    description: 'Ship, measure, learn, repeat. Real usage data drives every iteration. Products are living systems that improve with every cycle.',
+  },
+  {
+    step: '06',
+    title: 'Next Venture',
+    description: 'Apply accumulated learnings to the next opportunity. Each venture builds on the technology, market, and operational experience of the last.',
   },
 ];
 
@@ -79,59 +168,10 @@ export const ARTICLES: Article[] = [
   },
 ];
 
-export const PROCESS_STEPS = [
-  {
-    step: '01',
-    title: 'Architect',
-    description:
-      'System design before code. Data flow, API boundaries, AI integration points, and infrastructure decisions mapped before implementation begins.',
-  },
-  {
-    step: '02',
-    title: 'Engineer',
-    description:
-      'Build with tests from day one. Modular architecture, typed APIs, CI/CD pipelines, and production-ready code that ships.',
-  },
-  {
-    step: '03',
-    title: 'Ship & Scale',
-    description:
-      'Deploy fast, measure everything, iterate based on real usage. Products are living systems — built for continuous improvement.',
-  },
-];
-
-export const NARRATIVE_STEPS = [
-  {
-    era: '2020',
-    label: 'Engineering Foundations',
-    description: 'Automation systems at scale: Python, APIs, and data pipelines that replaced manual processes with reliable, testable code.',
-  },
-  {
-    era: '2021',
-    label: 'AI Engineering',
-    description: 'Machine learning and AI products: predictive models, recommendation engines, and first-generation AI applications deployed to production.',
-  },
-  {
-    era: '2022',
-    label: 'Full-Stack Product Building',
-    description: 'Owned product engineering end-to-end. Architecture, design, backend, frontend, and deployment of AI platforms from concept to launch.',
-  },
-  {
-    era: '2023',
-    label: 'Multi-Agent Systems',
-    description: 'Architected multi-agent AI systems with MCP, RAG, and memory persistence. Built the infrastructure for coordinated AI product ecosystems.',
-  },
-  {
-    era: '2024+',
-    label: 'Founder & AI Product Builder',
-    description: 'Founded Sonora Digital Corp. Building production AI products across music intelligence, health, content, compliance, and streaming analytics.',
-  },
-];
-
 export const TRUST_SIGNALS = [
-  { label: 'AI Products Shipped', value: '5+' },
+  { label: 'Startups Founded', value: '4' },
+  { label: 'AI Platforms Shipped', value: '5+' },
   { label: 'MCP Servers Built', value: '8+' },
-  { label: 'GitHub Repositories', value: '10+' },
   { label: 'Automated Tests', value: '382+' },
 ];
 

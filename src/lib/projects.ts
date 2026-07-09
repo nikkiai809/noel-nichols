@@ -5,9 +5,20 @@ export const projects: Project[] = [
   {
     id: 'signal',
     name: 'SIGNAL',
-    tagline: 'AI Music Intelligence Platform',
+    tagline: 'AI Music Intelligence Venture',
     summary:
       'SIGNAL predicts emerging artists through explainable AI scoring across multiple streaming platforms. A multi-provider intelligence platform connecting Spotify, YouTube, and TikTok data through a Feature Store architecture with real-time data pipelines.',
+    ventureType: 'AI Venture / Music Intelligence',
+    ventureRoles: [
+      { area: 'Founder', description: 'End-to-end venture creation from opportunity identification to product launch' },
+      { area: 'Product Strategy', description: 'Market research, vision definition, roadmap, business model design' },
+      { area: 'AI Architecture', description: 'Multi-provider data pipeline, Feature Store, explainable scoring engine design' },
+      { area: 'Market Research', description: 'Music industry analysis, A&R workflow study, competitive intelligence' },
+      { area: 'Technical Direction', description: 'System architecture, technology selection, infrastructure decisions' },
+      { area: 'Business Model', description: 'Monetization strategy, enterprise pricing, go-to-market planning' },
+      { area: 'Go-to-Market', description: 'Industry partnerships, launch strategy, enterprise sales approach' },
+      { area: 'Engineering', description: 'Full-stack implementation, data pipelines, API design, 382+ tests' },
+    ],
     role: 'Founder & AI Product Builder',
     category: 'AI / Music Intelligence',
     technologies: [
@@ -346,9 +357,18 @@ export const projects: Project[] = [
   {
     id: 'yami',
     name: 'YAMI',
-    tagline: 'Mental Health AI Platform',
+    tagline: 'AI Mental Health Venture',
     summary:
       'YAMI provides personalized mental health support through multi-agent conversational AI, evidence-based therapeutic techniques, and long-term memory that understands each user across sessions.',
+    ventureType: 'AI Venture / HealthTech',
+    ventureRoles: [
+      { area: 'Founder', description: 'Venture creation, product vision, and end-to-end execution' },
+      { area: 'Research', description: 'Mental health domain research, therapeutic technique analysis, clinical safety' },
+      { area: 'Product Vision', description: 'Product definition, user experience design, evidence-based feature roadmap' },
+      { area: 'AI Systems', description: 'Multi-agent architecture, RAG pipeline, long-term memory system design' },
+      { area: 'Automation', description: 'Conversation flows, crisis detection, escalation paths, privacy infrastructure' },
+      { area: 'Technical Planning', description: 'Architecture decisions, technology selection, compliance planning' },
+    ],
     role: 'AI Product Designer & Engineer',
     category: 'HealthTech / AI',
     technologies: ['React Native', 'TypeScript', 'Python', 'OpenAI', 'PostgreSQL', 'Firebase'],
@@ -414,9 +434,17 @@ export const projects: Project[] = [
   {
     id: 'sonora-digital-corp',
     name: 'Sonora Digital Corp',
-    tagline: 'Venture Studio & AI Innovation Lab',
+    tagline: 'AI Venture Studio',
     summary:
       'Sonora Digital Corp builds production AI products with a proprietary multi-agent architecture (Sonora Brain v3) — 8+ MCP servers, spec-driven development, persistent memory, and end-to-end product engineering.',
+    ventureType: 'Venture Studio / AI Infrastructure',
+    ventureRoles: [
+      { area: 'Founder', description: 'Company creation, vision, strategy, and operational leadership' },
+      { area: 'Ecosystem Strategy', description: 'Multi-product portfolio strategy, cross-venture infrastructure, platform thinking' },
+      { area: 'Platform Architecture', description: 'Sonora Brain v3: MCP-based multi-agent architecture, spec-driven development' },
+      { area: 'AI Infrastructure', description: '8+ MCP servers, Engram memory, GBrain orchestration, OpenClaw gateway' },
+      { area: 'Product Direction', description: 'Venture pipeline management, product-market fit, resource allocation' },
+    ],
     role: 'Founder & AI Product Builder',
     category: 'Venture Studio / AI',
     technologies: [
@@ -497,9 +525,16 @@ export const projects: Project[] = [
   {
     id: 'abe-music-hub',
     name: 'ABE Music Hub',
-    tagline: 'Label Intelligence Platform',
+    tagline: 'Music Tech Venture',
     summary:
       'An analytics and operations platform for independent music labels to manage artists, track revenue, and optimize streaming performance through data-driven decision-making.',
+    ventureType: 'Music Tech Venture',
+    ventureRoles: [
+      { area: 'Founder', description: 'Venture creation, product strategy, and technical direction' },
+      { area: 'Product Strategy', description: 'Label needs analysis, feature prioritization, roadmap planning' },
+      { area: 'Technical Lead', description: 'Full-stack architecture, data pipeline design, deployment infrastructure' },
+      { area: 'Platform Design', description: 'Dashboard UX, reporting system, multi-artist analytics' },
+    ],
     role: 'Product Manager & Technical Lead',
     category: 'Music Tech / Analytics',
     technologies: ['Next.js', 'TypeScript', 'Python', 'PostgreSQL', 'Chart.js', 'Stripe'],
@@ -540,9 +575,17 @@ export const projects: Project[] = [
   {
     id: 'velvet-rouge',
     name: 'Velvet Rouge',
-    tagline: 'Creative Brand & Digital Experience',
+    tagline: 'Creative Venture',
     summary:
       'A premium nightlife and creative technology brand combining event production with digital innovation, community building, and brand strategy.',
+    ventureType: 'Creative Venture',
+    ventureRoles: [
+      { area: 'Founder', description: 'Brand creation, vision, and end-to-end venture development' },
+      { area: 'Brand Strategy', description: 'Identity development, positioning, visual language, market differentiation' },
+      { area: 'Creative Direction', description: 'Design direction, content strategy, editorial aesthetic' },
+      { area: 'Community Building', description: 'Audience development, engagement strategy, growth systems' },
+      { area: 'Digital Experiences', description: 'Platform design, ticketing integration, interactive digital presence' },
+    ],
     role: 'Brand Strategist & Digital Designer',
     category: 'Creative Technology',
     technologies: ['Next.js', 'TypeScript', 'Tailwind CSS', 'Framer Motion', 'Stripe'],

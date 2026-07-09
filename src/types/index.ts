@@ -1,4 +1,4 @@
-/* ─── Project Types ─── */
+/* ─── Project / Venture Types ─── */
 
 export interface Metric {
   value: string;
@@ -71,6 +71,11 @@ export interface TechCategory {
   items: string[];
 }
 
+export interface VentureRole {
+  area: string;
+  description: string;
+}
+
 export interface Project {
   id: string;
   name: string;
@@ -87,6 +92,8 @@ export interface Project {
   architecture?: ArchNode[];
   screenshots?: Screenshot[];
   sections: CaseSection[];
+  ventureRoles?: VentureRole[];
+  ventureType?: string;
 }
 
 /* ─── Navigation ─── */
@@ -148,4 +155,18 @@ export interface HowWorkStep {
   step: string;
   title: string;
   description: string;
+}
+
+/* ─── Founder ─── */
+
+export interface FounderMetric {
+  value: string;
+  label: string;
+}
+
+export interface FounderTimelineEvent {
+  era: string;
+  title: string;
+  description: string;
+  type: 'founder' | 'product' | 'technology' | 'company';
 }
