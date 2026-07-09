@@ -1,0 +1,200 @@
+@import "tailwindcss";
+
+@theme {
+  --color-background: #fafafa;
+  --color-foreground: #0a0a0b;
+  --color-muted: #f5f5f5;
+  --color-muted-foreground: #71717a;
+  --color-border: #e4e4e7;
+  --color-accent: #18181b;
+  --color-accent-foreground: #fafafa;
+  --color-card: #ffffff;
+
+  --font-sans: "Inter", "SF Pro", system-ui, -apple-system, sans-serif;
+  --font-mono: "JetBrains Mono", "SF Mono", monospace;
+
+  --ease-emphasized: cubic-bezier(0.16, 1, 0.3, 1);
+
+  --radius-sm: 6px;
+  --radius-md: 8px;
+  --radius-lg: 12px;
+  --radius-xl: 16px;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --color-background: #0a0a0b;
+    --color-foreground: #f5f5f5;
+    --color-muted: #18181b;
+    --color-muted-foreground: #a1a1aa;
+    --color-border: #27272a;
+    --color-accent: #f5f5f5;
+    --color-accent-foreground: #18181b;
+    --color-card: #18181b;
+  }
+}
+
+/* --- Base --- */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+
+body {
+  font-family: var(--font-sans);
+  background: var(--color-background);
+  color: var(--color-foreground);
+  line-height: 1.6;
+  letter-spacing: -0.011em;
+}
+
+::selection {
+  background: rgba(0, 0, 0, 0.08);
+}
+
+@media (prefers-color-scheme: dark) {
+  ::selection {
+    background: rgba(255, 255, 255, 0.1);
+  }
+}
+
+/* --- Typography --- */
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 600;
+  letter-spacing: -0.03em;
+  line-height: 1.2;
+}
+
+p {
+  letter-spacing: -0.011em;
+}
+
+/* --- Scrollbar --- */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--color-border);
+  border-radius: 3px;
+}
+
+/* --- Focus --- */
+:focus-visible {
+  outline: 2px solid var(--color-foreground);
+  outline-offset: 2px;
+  border-radius: 2px;
+}
+
+/* --- Animations --- */
+@keyframes fade-in-up {
+  from { opacity: 0; transform: translateY(12px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fade-in {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes scale-in {
+  from { opacity: 0; transform: scale(0.95); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+.animate-fade-in-up {
+  animation: fade-in-up 0.5s var(--ease-emphasized) forwards;
+}
+
+.animate-fade-in {
+  animation: fade-in 0.3s var(--ease-emphasized) forwards;
+}
+
+.animate-scale-in {
+  animation: scale-in 0.3s var(--ease-emphasized) forwards;
+}
+
+/* Utility: text balance */
+.text-balance {
+  text-wrap: balance;
+}
+
+/* Utility: reading width */
+.prose {
+  max-width: 65ch;
+}
+
+/* Utility: section padding */
+.section-padding {
+  padding: 120px 24px;
+}
+
+@media (min-width: 768px) {
+  .section-padding {
+    padding: 160px 32px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .section-padding {
+    padding: 200px 48px;
+  }
+}
+
+/* Utility: container */
+.content-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+/* Utility: editorial grid */
+.editorial-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 48px;
+}
+
+@media (min-width: 768px) {
+  .editorial-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 64px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .editorial-grid {
+    gap: 96px;
+  }
+}
+
+/* Reading progress bar */
+.reading-progress {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: var(--color-foreground);
+  z-index: 100;
+  transition: width 50ms linear;
+}
+
+@media (prefers-color-scheme: dark) {
+  .reading-progress {
+    background: var(--color-foreground);
+  }
+}
