@@ -1,30 +1,84 @@
 import type { Metadata } from 'next';
+import { Inter, JetBrains_Mono } from 'next/font/google';
 import './globals.css';
-import { Navigation } from '@/components/layout/navigation';
-import { Footer } from '@/components/layout/footer';
-import { ReadingProgress } from '@/components/layout/reading-progress';
-import { CommandMenu } from '@/components/layout/command-menu';
+import Navbar from '@/components/layout/navbar';
+import Footer from '@/components/layout/footer';
+
+const inter = Inter({
+  subsets: ['latin'],
+  display: 'swap',
+  variable: '--font-inter',
+});
+
+const jetbrainsMono = JetBrains_Mono({
+  subsets: ['latin'],
+  display: 'swap',
+  variable: '--font-jetbrains',
+});
 
 export const metadata: Metadata = {
-  title: {
-    default: 'Noel Nichols — Product Builder & Founder',
-    template: '%s — Noel Nichols',
-  },
+  title: 'Noel Nichols | AI Product Builder & Founder',
   description:
-    'I build products at the intersection of AI, music, and human creativity. Founder of Sonora Digital Corp. Creator of SIGNAL, YAMI, and ABE Music Hub.',
+    'I build AI-powered products, digital experiences and ventures from idea to execution. Product builder specializing in AI platforms, music intelligence, and digital health.',
+  keywords: [
+    'AI Product Builder',
+    'Founder',
+    'Product Builder',
+    'AI Platforms',
+    'Music Intelligence',
+    'Digital Products',
+    'Noel Nichols',
+    'Venture Studio',
+    'Machine Learning',
+  ],
   openGraph: {
-    title: 'Noel Nichols',
+    title: 'Noel Nichols | AI Product Builder & Founder',
     description:
-      'Product builder, founder, and creative technologist. AI, product, design, and engineering.',
-    url: 'https://noel-nichols.vercel.app',
-    siteName: 'Noel Nichols',
-    locale: 'en_US',
+      'I build AI-powered products, digital experiences and ventures from idea to execution.',
     type: 'website',
+    locale: 'en_US',
+    siteName: 'Noel Nichols',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Noel Nichols | AI Product Builder & Founder',
+    description:
+      'I build AI-powered products, digital experiences and ventures from idea to execution.',
   },
   robots: {
     index: true,
     follow: true,
   },
+  other: {
+    'og:image': 'https://noel-nichols.vercel.app/og.png',
+    'og:image:width': '1200',
+    'og:image:height': '630',
+    'twitter:image': 'https://noel-nichols.vercel.app/og.png',
+  },
+};
+
+const jsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'Person',
+  name: 'Noel Nichols',
+  url: 'https://noel-nichols.vercel.app',
+  givenName: 'Noel',
+  familyName: 'Nichols',
+  jobTitle: 'AI Product Builder & Founder',
+  description:
+    'I build AI-powered products, digital experiences and ventures from idea to execution.',
+  knowsAbout: [
+    'Artificial Intelligence',
+    'Product Development',
+    'Machine Learning',
+    'Venture Building',
+    'Digital Products',
+    'Music Intelligence',
+  ],
+  sameAs: [
+    'https://github.com/nikkiai809',
+    'https://linkedin.com/in/noelnichols',
+  ],
 };
 
 export default function RootLayout({
@@ -33,11 +87,15 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" suppressHydrationWarning>
-      <body>
-        <ReadingProgress />
-        <Navigation />
-        <CommandMenu />
+    <html lang="en" className="dark">
+      <head>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        />
+      </head>
+      <body className={`${inter.variable} ${jetbrainsMono.variable} antialiased bg-[#0a0a0a] text-[#f5f5f0]`}>
+        <Navbar />
         <main className="min-h-screen">{children}</main>
         <Footer />
       </body>

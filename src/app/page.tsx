@@ -1,493 +1,297 @@
-import Image from 'next/image';
-import { ArrowUpRight, ExternalLink } from 'lucide-react';
+'use client';
 
-const projects = [
-  {
-    id: 'signal',
-    name: 'SIGNAL',
-    tagline: 'AI Decision Intelligence for the Music Industry',
-    url: 'https://signal-music.vercel.app',
-    roles: ['Founder', 'Product', 'UX', 'Engineering', 'AI'],
-    description:
-      'An AI-powered platform that transforms how record labels discover, evaluate, and act on artist opportunities. Executive dashboard with decision intelligence, scoring engine, and multi-agent architecture.',
-    logo: '/logos/signal.svg',
-    color: '#6366f1',
-    bgClass: 'from-indigo-50 to-white',
-  },
-  {
-    id: 'yami',
-    name: 'YAMI',
-    tagline: 'Preventive Mental Health Ecosystem',
-    url: 'https://yami-mx.vercel.app',
-    roles: ['Founder', 'Product', 'Brand', 'Engineering'],
-    description:
-      'A three-layer preventive mental health platform for Mexico — Miru (detect), Kiku (accompany), Tomoni (connect). Built from concept to deployment: product strategy, brand identity, UX, and full-stack engineering.',
-    logo: '/logos/yami.svg',
-    color: '#2d8f7d',
-    bgClass: 'from-teal-50 to-white',
-  },
-  {
-    id: 'abe',
-    name: 'ABE Music Hub',
-    tagline: '360° Music Label Operating System',
-    url: 'https://abe-music-hub.vercel.app',
-    roles: ['Product', 'UX', 'Engineering'],
-    description:
-      'A complete music label OS connecting discovery, production, brand, distribution, and monetization in a single ecosystem. 11 interconnected spaces designed for maximum creative flow.',
-    logo: '/logos/abe.svg',
-    color: '#0ea5e9',
-    bgClass: 'from-sky-50 to-white',
-  },
-  {
-    id: 'sonora',
-    name: 'Sonora Digital Corp',
-    tagline: 'Venture Studio — Native Agent OS',
-    url: 'https://sonoradigitalcorp.com',
-    roles: ['Co-Founder', 'Product', 'Brand', 'Strategy'],
-    description:
-      'A technology venture studio building AI-powered infrastructure for the music industry. Our Native Agent OS powers 155 MCP tools, 128 skills, 6 ADK agents, and 535 passing tests across the entire ecosystem.',
-    logo: '/logos/sonora.svg',
-    color: '#7c5cfc',
-    bgClass: 'from-purple-50 to-white',
-  },
-  {
-    id: 'velvet',
-    name: 'Velvet Rouge',
-    tagline: 'Global Creative Network',
-    url: 'https://velvet-rouge.vercel.app',
-    roles: ['Creative Director', 'Brand', 'Design'],
-    description:
-      'A private creative network connecting six global cities through editorial, observation, and cultural signal. Not a brand, not an event — an invisible thread between Mexico City, Tokyo, Seoul, Berlin, LA, and Shanghai.',
-    logo: '/logos/velvet.svg',
-    color: '#5e1018',
-    bgClass: 'from-stone-50 to-white',
-  },
-  {
-    id: 'dental',
-    name: 'Dr. Rafael Gómez Palafox',
-    tagline: 'Maxillofacial Prosthetics & Oncology Dentistry',
-    url: 'https://rafaelgomezpalafox.space-z.ai',
-    roles: ['Full-Stack', 'UX', 'Design'],
-    description:
-      'Complete digital presence for a UNAM-trained specialist in maxillofacial prosthetics and oncology dentistry. From strategy to deployment: appointment system, content architecture, and patient experience design.',
-    logo: '/logos/dental.svg',
-    color: '#10b981',
-    bgClass: 'from-emerald-50 to-white',
-  },
-];
+import Link from 'next/link';
+import { FadeInUp, FadeIn, ScaleIn, StaggerContainer, StaggerItem, SectionContainer } from '@/components/sections/animations';
+import ProjectCard from '@/components/sections/project-card';
+import { projects } from '@/lib/projects';
 
-const capabilities = [
-  { title: 'AI Products', desc: 'From concept to deployed AI systems with scoring, reasoning, and explainability.' },
-  { title: 'Product Strategy', desc: 'Roadmap definition, prioritization, spec-driven development, and go-to-market.' },
-  { title: 'Technical Architecture', desc: 'Full-stack system design — Next.js, Python, MCP, distributed agents, and infrastructure.' },
-  { title: 'UX & Interaction', desc: 'Premium interfaces at Apple/Linear quality. Editorial typography, motion, and design systems.' },
-  { title: 'Brand Systems', desc: 'Naming, identity, visual language, and narrative architecture for ventures and products.' },
-  { title: 'Engineering', desc: 'TypeScript, Python, React, Node.js, Tailwind, Prisma, Docker, and cloud infrastructure.' },
-  { title: 'Growth & GTM', desc: 'Launch strategy, positioning, content architecture, and audience development for new products.' },
-  { title: 'Creative Direction', desc: 'Artistic vision, editorial direction, cultural strategy, and creative operations.' },
-  { title: 'Leadership', desc: 'Cross-functional team building, stakeholder management, and venture-level decision making.' },
-];
-
-const experience = [
-  {
-    period: '2024 — Present',
-    title: 'Co-Founder & Creative Partner',
-    org: 'Sonora Digital Corp',
-    description:
-      'Built a Native Agent OS from scratch — 155 MCP tools, 128 skills, 6 agents, 535 tests, 0 failures. Launched SIGNAL (AI music intelligence), ABE Music Hub (label OS), and YAMI (mental health platform). Grew the venture studio to 4 products, 6 services, and 3 platforms.',
-    type: 'Founder',
-  },
-  {
-    period: '2023 — Present',
-    title: 'Product Builder & Creative Director',
-    org: 'Independent',
-    description:
-      'End-to-end product creation: from concept through design, engineering, and launch. Delivered Velvet Rouge (global creative network), multiple studio projects, and complete digital presence for healthcare professionals.',
-    type: 'Builder',
-  },
-  {
-    period: '2020 — Present',
-    title: 'Marketing & Brand Strategist',
-    org: 'Independent / Consulting',
-    description:
-      'Brand positioning, go-to-market planning, and narrative architecture for startups and creative businesses across music, technology, and healthcare sectors.',
-    type: 'Strategy',
-  },
-  {
-    period: '2018 — Present',
-    title: 'Project & Team Lead',
-    org: 'Various',
-    description:
-      'Led cross-functional teams across product development, brand launches, community initiatives, and technology implementations. Managed stakeholder relationships, budgets, and delivery timelines.',
-    type: 'Leadership',
-  },
-];
-
-export default function HomePage() {
+export default function Home() {
   return (
     <>
-      {/* ===== HERO ===== */}
-      <section className="min-h-screen flex items-center section pb-0">
-        <div className="container-wide px-6 md:px-8 lg:px-12 pt-24">
-          <div className="max-w-4xl text-left">
-            <p className="text-sm text-muted-foreground font-mono mb-6 animate-fade-in-up">
-              Noel Nichols
-            </p>
-            <h1 className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-semibold tracking-tight leading-[0.95] animate-fade-in-up stagger-1">
-              I build
+      {/* ─── HERO ─── */}
+      <section className="relative min-h-screen flex items-center px-6 md:px-10 overflow-hidden">
+        <div className="hero-gradient-bg" />
+        <div className="max-w-[1280px] mx-auto w-full relative z-10 pt-20">
+          <FadeInUp>
+            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/[0.04] border border-white/[0.06] mb-8">
+              <span className="w-1.5 h-1.5 rounded-full bg-[#6366f1] animate-pulse" />
+              <span className="text-xs text-white/40 font-mono">AI Product Builder &amp; Founder</span>
+            </div>
+          </FadeInUp>
+
+          <FadeInUp delay={0.1}>
+            <h1 className="text-[clamp(2.5rem,6vw,5.5rem)] font-semibold leading-[0.95] tracking-[-0.04em] text-balance mb-6">
+              Building{' '}
+              <span className="gradient-text">AI-powered products</span>
               <br />
-              <span className="italic font-normal text-muted-foreground">products</span>.
+              and digital ventures.
             </h1>
-            <p className="text-lg sm:text-xl text-muted-foreground mt-8 max-w-2xl leading-relaxed animate-fade-in-up stagger-2">
-              AI infrastructure. Music platforms. Mental health ecosystems.
-              Brand systems. From concept through design, engineering, and
-              deployment — I take products from zero to live.
+          </FadeInUp>
+
+          <FadeInUp delay={0.2}>
+            <p className="text-base md:text-lg text-white/40 max-w-xl leading-relaxed mb-10">
+              I design, build and launch technology products that transform ideas into scalable businesses.
+              Strategy, creativity, AI, and execution — from concept to market.
             </p>
-            <div className="flex flex-wrap items-center gap-4 mt-10 animate-fade-in-up stagger-3">
-              <a
-                href="#products"
-                className="inline-flex items-center gap-2 px-6 py-3 bg-foreground text-background rounded-full text-sm font-medium hover:opacity-80 transition-all"
-              >
-                View products <ArrowUpRight className="h-4 w-4" />
-              </a>
-              <a
-                href="#contact"
-                className="inline-flex items-center gap-2 px-6 py-3 border border-border rounded-full text-sm text-muted-foreground hover:text-foreground hover:border-foreground transition-all"
-              >
-                Get in touch <ArrowUpRight className="h-4 w-4" />
-              </a>
-            </div>
-            {/* Subtle scroll indicator */}
-            <div className="mt-24 sm:mt-32 flex items-center gap-2 text-xs text-muted-foreground/40 font-mono animate-fade-in stagger-4">
-              <span className="w-6 h-px bg-muted-foreground/20" />
-              scroll
-            </div>
-          </div>
-        </div>
-      </section>
+          </FadeInUp>
 
-      {/* ===== SELECTED PRODUCTS ===== */}
-      <section id="products" className="section anchor-offset">
-        <div className="container-wide px-6 md:px-8 lg:px-12">
-          <div className="max-w-4xl mb-16 md:mb-24 text-left">
-            <p className="text-xs text-muted-foreground font-mono mb-4 tracking-wider uppercase">
-              Selected Products
-            </p>
-            <h2 className="text-3xl sm:text-4xl md:text-5xl font-semibold tracking-tight">
-              I don&apos;t just design or code — I build products from start to finish.
-            </h2>
-          </div>
-
-          <div className="space-y-24 md:space-y-32">
-            {projects.map((project, i) => (
-              <div
-                key={project.id}
-                className="grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-12 lg:gap-16 items-center animate-reveal"
-                style={{ animationDelay: `${i * 0.1}s` }}
-              >
-                {/* Project preview */}
-                <a
-                  href={project.url}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className={`project-frame aspect-[4/3] relative overflow-hidden bg-gradient-to-br ${project.bgClass} group`}
-                >
-                  <div className="absolute inset-0 flex items-center justify-center p-8 sm:p-12">
-                    <Image
-                      src={project.logo}
-                      alt={`${project.name} logo`}
-                      width={280}
-                      height={70}
-                      unoptimized
-                      className="w-full max-w-[220px] sm:max-w-[280px] h-auto opacity-50 group-hover:opacity-80 transition-opacity duration-500"
-                    />
-                  </div>
-                  <div className="absolute inset-x-0 bottom-0 p-6 bg-gradient-to-t from-black/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                    <span className="inline-flex items-center gap-1.5 text-sm font-medium text-foreground bg-background/90 backdrop-blur-sm px-3 py-1.5 rounded-full">
-                      Visit live site <ExternalLink className="h-3.5 w-3.5" />
-                    </span>
-                  </div>
-                </a>
-
-                {/* Project info - left aligned */}
-                <div className="text-left">
-                  <div className="flex items-center gap-3 mb-4">
-                    <h3 className="text-2xl sm:text-3xl font-semibold tracking-tight">
-                      {project.name}
-                    </h3>
-                    <span className="w-2 h-2 rounded-full" style={{ backgroundColor: project.color }} />
-                  </div>
-                  <p className="text-base text-muted-foreground mb-3 font-medium">
-                    {project.tagline}
-                  </p>
-                  <div className="flex flex-wrap gap-1.5 mb-5">
-                    {project.roles.map((role) => (
-                      <span key={role} className="role-tag">{role}</span>
-                    ))}
-                  </div>
-                  <p className="text-sm text-muted-foreground leading-relaxed">
-                    {project.description}
-                  </p>
-                  <a
-                    href={project.url}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="inline-flex items-center gap-1.5 text-sm font-medium mt-5 hover:opacity-50 transition-opacity"
-                  >
-                    Visit {project.name} <ArrowUpRight className="h-3.5 w-3.5" />
-                  </a>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* ===== HOW I BUILD ===== */}
-      <section id="approach" className="section anchor-offset">
-        <div className="container-wide px-6 md:px-8 lg:px-12">
-          <div className="divider mb-16 md:mb-24" />
-          <div className="max-w-4xl mb-16 text-left">
-            <p className="text-xs text-muted-foreground font-mono mb-4 tracking-wider uppercase">
-              How I Build
-            </p>
-            <h2 className="text-3xl sm:text-4xl md:text-5xl font-semibold tracking-tight mb-8">
-              From zero to deployed — with no gaps between vision and execution.
-            </h2>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-12 md:gap-16 text-left">
-            {[
-              {
-                step: '01',
-                title: 'Spec & Design',
-                content:
-                  'Every product starts with a clear spec: purpose, scope, architecture, and interfaces defined before a single line of code. Design decisions are documented and trade-offs are explicit.',
-              },
-              {
-                step: '02',
-                title: 'Build & Integrate',
-                content:
-                  'I build full-stack — from Next.js frontends to Python AI services, from MCP agent infrastructure to database architecture. Every component is tested alongside the code, not after.',
-              },
-              {
-                step: '03',
-                title: 'Ship & Iterate',
-                content:
-                  'Deployed on production infrastructure (Vercel, Docker, cloud). Real users, real data, real impact. Products ship fast and improve continuously, guided by metrics and feedback.',
-              },
-            ].map((step) => (
-              <div key={step.step} className="animate-reveal">
-                <p className="text-3xl font-semibold tracking-tight text-muted-foreground/20 mb-4">
-                  {step.step}
-                </p>
-                <h3 className="text-lg font-semibold mb-3">{step.title}</h3>
-                <p className="text-sm text-muted-foreground leading-relaxed">{step.content}</p>
-              </div>
-            ))}
-          </div>
-
-          <div className="mt-16 md:mt-24 p-8 md:p-12 bg-muted rounded-2xl border border-border text-left">
-            <p className="text-sm text-muted-foreground font-mono mb-3">Methodology</p>
-            <blockquote className="text-lg sm:text-xl md:text-2xl text-foreground font-medium leading-relaxed max-w-3xl">
-              &ldquo;Spec-Driven Development. Every component is defined, planned, built, verified, and archived. No ambiguity. No shortcuts. No surprises.&rdquo;
-            </blockquote>
-            <div className="flex flex-wrap gap-2 mt-6">
-              {['Spec', 'Plan', 'Tasks', 'Apply', 'Verify', 'Archive'].map((s) => (
-                <span key={s} className="text-xs px-3 py-1 rounded-full bg-background border border-border font-mono">
-                  {s}
-                </span>
-              ))}
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* ===== EXPERIENCE ===== */}
-      <section id="experience" className="section anchor-offset">
-        <div className="container-wide px-6 md:px-8 lg:px-12">
-          <div className="divider mb-16 md:mb-24" />
-          <div className="max-w-4xl mb-16 text-left">
-            <p className="text-xs text-muted-foreground font-mono mb-4 tracking-wider uppercase">
-              Experience
-            </p>
-            <h2 className="text-3xl sm:text-4xl md:text-5xl font-semibold tracking-tight">
-              Track record of shipping.
-            </h2>
-          </div>
-
-          <div className="space-y-0 text-left">
-            {experience.map((exp, i) => (
-              <div
-                key={`${exp.title}-${exp.org}`}
-                className="grid grid-cols-1 md:grid-cols-4 gap-4 md:gap-8 py-8 border-t border-border animate-reveal"
-                style={{ animationDelay: `${i * 0.1}s` }}
-              >
-                <div className="md:col-span-1">
-                  <p className="text-xs text-muted-foreground font-mono">{exp.period}</p>
-                </div>
-                <div className="md:col-span-3 text-left">
-                  <div className="flex items-center gap-2 mb-1">
-                    <h3 className="text-lg font-semibold">{exp.title}</h3>
-                    <span className="role-tag">{exp.type}</span>
-                  </div>
-                  <p className="text-sm text-muted-foreground mb-2">{exp.org}</p>
-                  <p className="text-sm text-muted-foreground leading-relaxed">{exp.description}</p>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* ===== CAPABILITIES ===== */}
-      <section id="capabilities" className="section anchor-offset">
-        <div className="container-wide px-6 md:px-8 lg:px-12">
-          <div className="divider mb-16 md:mb-24" />
-          <div className="max-w-4xl mb-16 text-left">
-            <p className="text-xs text-muted-foreground font-mono mb-4 tracking-wider uppercase">
-              Capabilities
-            </p>
-            <h2 className="text-3xl sm:text-4xl md:text-5xl font-semibold tracking-tight">
-              Not a list of tools. A set of capabilities.
-            </h2>
-          </div>
-
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-0 divide-y sm:divide-y-0 sm:divide-x divide-border text-left">
-            {capabilities.map((cap, i) => (
-              <div
-                key={cap.title}
-                className={`p-6 md:p-8 animate-reveal ${i >= 3 ? 'sm:border-t' : ''} ${i % 3 !== 0 ? 'sm:border-t-0' : ''}`}
-                style={{ animationDelay: `${i * 0.05}s` }}
-              >
-                <h3 className="text-sm font-semibold mb-2">{cap.title}</h3>
-                <p className="text-sm text-muted-foreground leading-relaxed">{cap.desc}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* ===== WRITING ===== */}
-      <section id="writing" className="section anchor-offset">
-        <div className="container-wide px-6 md:px-8 lg:px-12">
-          <div className="divider mb-16 md:mb-24" />
-          <div className="max-w-4xl mb-16 md:mb-20 text-left">
-            <p className="text-xs text-muted-foreground font-mono mb-4 tracking-wider uppercase">
-              Writing
-            </p>
-            <h2 className="text-3xl sm:text-4xl md:text-5xl font-semibold tracking-tight mb-6">
-              Philosophy, case studies, and observations from building at the edge of AI and creativity.
-            </h2>
-          </div>
-
-          <div className="space-y-12 md:space-y-16 max-w-4xl text-left">
-            {/* Article 1 */}
-            <article className="border-t border-border pt-8">
-              <p className="text-xs text-muted-foreground font-mono mb-3">2026 · Case Study</p>
-              <h3 className="text-xl sm:text-2xl font-semibold tracking-tight mb-3">
-                Building Native Agent OS: 155 MCP Tools, 0 Failures
-              </h3>
-              <p className="text-sm text-muted-foreground leading-relaxed max-w-2xl">
-                How Spec-Driven Development enabled us to build a multi-agent AI operating system with 535 passing tests,
-                6 agents, and 128 skills — from day one. The architecture, the methodology, and the lessons learned
-                scaling MCP-native infrastructure across four products simultaneously.
-              </p>
-            </article>
-
-            {/* Article 2 */}
-            <article className="border-t border-border pt-8">
-              <p className="text-xs text-muted-foreground font-mono mb-3">2026 · Philosophy</p>
-              <h3 className="text-xl sm:text-2xl font-semibold tracking-tight mb-3">
-                The Product Builder&apos;s Creed
-              </h3>
-              <p className="text-sm text-muted-foreground leading-relaxed max-w-2xl">
-                On the discipline of taking products from zero to deployed. Why I believe spec-first development
-                is the only way to build reliable AI products. Why ambiguity is the enemy of quality.
-                And why the gap between vision and execution defines the builder.
-              </p>
-            </article>
-
-            {/* Article 3 */}
-            <article className="border-t border-border pt-8">
-              <p className="text-xs text-muted-foreground font-mono mb-3">2026 · Essay</p>
-              <h3 className="text-xl sm:text-2xl font-semibold tracking-tight mb-3">
-                AI Infrastructure Is the New Label Infrastructure
-              </h3>
-              <p className="text-sm text-muted-foreground leading-relaxed max-w-2xl">
-                The music industry is undergoing a quiet infrastructure revolution. From decision intelligence
-                platforms to preventive mental health ecosystems, the products that will define the next decade
-                are being built at the intersection of AI agents and creative economies. A look at what&apos;s
-                emerging and why it matters.
-              </p>
-            </article>
-
-            {/* Article 4 */}
-            <article className="border-t border-border pt-8">
-              <p className="text-xs text-muted-foreground font-mono mb-3">2025 · Case Study</p>
-              <h3 className="text-xl sm:text-2xl font-semibold tracking-tight mb-3">
-                From Concept to Deployment: Building SIGNAL for the Music Industry
-              </h3>
-              <p className="text-sm text-muted-foreground leading-relaxed max-w-2xl">
-                The full journey of building an AI-powered decision intelligence platform for record labels.
-                From market research with label executives through architecture design, 9 MCP server deployment,
-                and beta launch. How executive dashboard design thinking shaped every product decision.
-              </p>
-            </article>
-
-            {/* More coming */}
-            <div className="border-t border-border pt-8 flex items-center gap-3 text-sm text-muted-foreground">
-              <span className="w-4 h-px bg-muted-foreground/30" />
-              More essays and case studies forthcoming
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* ===== CONTACT ===== */}
-      <section id="contact" className="section anchor-offset">
-        <div className="container-wide px-6 md:px-8 lg:px-12">
-          <div className="divider mb-16 md:mb-24" />
-          <div className="max-w-4xl text-left">
-            <p className="text-xs text-muted-foreground font-mono mb-4 tracking-wider uppercase">
-              Contacto
-            </p>
-            <h2 className="text-3xl sm:text-4xl md:text-5xl font-semibold tracking-tight mb-8">
-              Building something interesting? Let&apos;s talk.
-            </h2>
-            <p className="text-muted-foreground text-lg leading-relaxed max-w-2xl mb-10">
-              Whether you&apos;re a founder building AI infrastructure, a label
-              looking for a technology partner, or a team that needs product
-              leadership — I&apos;d like to hear about what you&apos;re building.
-            </p>
-
+          <FadeInUp delay={0.3}>
             <div className="flex flex-wrap items-center gap-4">
+              <Link
+                href="/projects"
+                className="px-6 py-3 bg-white text-black text-sm font-medium rounded-full hover:bg-white/90 transition-all"
+              >
+                View Projects
+              </Link>
+              <Link
+                href="#contact"
+                className="px-6 py-3 text-sm text-white/50 hover:text-white transition-colors"
+              >
+                Contact Me →
+              </Link>
+            </div>
+          </FadeInUp>
+        </div>
+
+        {/* Scroll indicator */}
+        <div className="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2">
+          <span className="text-[10px] text-white/20 font-mono tracking-widest">SCROLL</span>
+          <div className="w-px h-8 bg-gradient-to-b from-white/20 to-transparent" />
+        </div>
+      </section>
+
+      {/* ─── SELECTED PROJECTS ─── */}
+      <SectionContainer id="work">
+        <div className="max-w-3xl mb-16">
+          <FadeIn>
+            <div className="section-label">Selected Work</div>
+          </FadeIn>
+          <FadeInUp>
+            <h2 className="text-3xl md:text-4xl font-semibold text-white mb-4">
+              Products I&apos;ve Built
+            </h2>
+            <p className="text-white/40 text-sm leading-relaxed">
+              Each project represents a complete product journey — from identifying the opportunity
+              to designing, building, and launching. AI-powered platforms, digital ventures, and
+              technology solutions that deliver real impact.
+            </p>
+          </FadeInUp>
+        </div>
+
+        <div className="grid md:grid-cols-2 gap-5">
+          {projects.map((project, i) => (
+            <ProjectCard
+              key={project.id}
+              id={project.id}
+              name={project.name}
+              tagline={project.tagline}
+              description={project.description}
+              technologies={project.technologies}
+              colors={{ gradient: project.gradient }}
+              index={i}
+            />
+          ))}
+        </div>
+      </SectionContainer>
+
+      {/* ─── HOW I BUILD ─── */}
+      <SectionContainer>
+        <div className="max-w-3xl mb-16">
+          <FadeIn>
+            <div className="section-label">Process</div>
+          </FadeIn>
+          <FadeInUp>
+            <h2 className="text-3xl md:text-4xl font-semibold text-white mb-4">How I Build</h2>
+            <p className="text-white/40 text-sm leading-relaxed">
+              From concept to market, I follow a systematic approach that combines strategic thinking,
+              design rigor, and technical execution.
+            </p>
+          </FadeInUp>
+        </div>
+
+        <StaggerContainer className="grid md:grid-cols-3 gap-5">
+          {[
+            {
+              step: '01',
+              title: 'Discover & Define',
+              desc: 'I start with the problem — not the solution. Research, user interviews, market analysis, and opportunity sizing to validate the direction before building.',
+            },
+            {
+              step: '02',
+              title: 'Design & Build',
+              desc: 'Architecture, UX, and engineering in parallel. I design systems that scale and interfaces that feel intuitive. AI integration where it adds real value.',
+            },
+            {
+              step: '03',
+              title: 'Launch & Iterate',
+              desc: 'Ship fast, measure everything, iterate constantly. Products are living systems — I build for continuous improvement and market feedback.',
+            },
+          ].map((item) => (
+            <StaggerItem key={item.step}>
+              <div className="metric-card h-full">
+                <span className="text-[10px] font-mono text-white/20 tracking-widest">{item.step}</span>
+                <h3 className="text-lg font-semibold text-white mt-3 mb-2">{item.title}</h3>
+                <p className="text-sm text-white/40 leading-relaxed">{item.desc}</p>
+              </div>
+            </StaggerItem>
+          ))}
+        </StaggerContainer>
+      </SectionContainer>
+
+      {/* ─── ABOUT ─── */}
+      <SectionContainer id="about">
+        <div className="grid md:grid-cols-2 gap-12 md:gap-20 items-start">
+          <div>
+            <FadeIn>
+              <div className="section-label">About</div>
+            </FadeIn>
+            <FadeInUp>
+              <h2 className="text-3xl md:text-4xl font-semibold text-white mb-6">
+                I build at the intersection of strategy, design, and AI.
+              </h2>
+            </FadeInUp>
+          </div>
+
+          <div className="space-y-5">
+            <FadeInUp delay={0.1}>
+              <p className="text-sm md:text-base text-white/50 leading-relaxed">
+                I&apos;m a product builder and founder who combines marketing strategy, creative
+                direction, AI engineering, and business development to create products that matter.
+              </p>
+            </FadeInUp>
+            <FadeInUp delay={0.15}>
+              <p className="text-sm md:text-base text-white/50 leading-relaxed">
+                My background spans music intelligence, mental health technology, creative brands,
+                and venture building. I work across the full product lifecycle — from identifying
+                market opportunities to shipping production AI systems.
+              </p>
+            </FadeInUp>
+            <FadeInUp delay={0.2}>
+              <p className="text-sm md:text-base text-white/50 leading-relaxed">
+                Currently building{' '}
+                <Link href="/projects/sonora-digital-corp" className="text-white/70 hover:text-white underline underline-offset-4 decoration-white/20">
+                  Sonora Digital Corp
+                </Link>
+                , a venture studio creating AI-powered products. Previously founded multiple digital
+                ventures across music, health, and entertainment.
+              </p>
+            </FadeInUp>
+          </div>
+        </div>
+      </SectionContainer>
+
+      {/* ─── CAPABILITIES ─── */}
+      <SectionContainer>
+        <div className="max-w-3xl mb-16">
+          <FadeIn>
+            <div className="section-label">Capabilities</div>
+          </FadeIn>
+          <FadeInUp>
+            <h2 className="text-3xl md:text-4xl font-semibold text-white mb-4">What I Do</h2>
+          </FadeInUp>
+        </div>
+
+        <StaggerContainer className="grid sm:grid-cols-2 lg:grid-cols-4 gap-5">
+          {[
+            { title: 'AI Products', desc: 'Full-stack AI platforms, LLM integration, ML pipelines, and intelligent systems that solve real problems.' },
+            { title: 'Product Strategy', desc: 'Opportunity identification, market analysis, roadmap planning, and go-to-market execution for digital products.' },
+            { title: 'Technical Architecture', desc: 'System design, API architecture, data pipelines, and infrastructure planning for scalable products.' },
+            { title: 'Venture Building', desc: 'From zero to launch — concept validation, team building, funding strategy, and venture creation.' },
+          ].map((cap) => (
+            <StaggerItem key={cap.title}>
+              <div className="metric-card h-full">
+                <h3 className="text-base font-semibold text-white mb-2">{cap.title}</h3>
+                <p className="text-sm text-white/40 leading-relaxed">{cap.desc}</p>
+              </div>
+            </StaggerItem>
+          ))}
+        </StaggerContainer>
+      </SectionContainer>
+
+      {/* ─── WRITING ─── */}
+      <SectionContainer id="writing">
+        <div className="max-w-3xl mb-16">
+          <FadeIn>
+            <div className="section-label">Writing</div>
+          </FadeIn>
+          <FadeInUp>
+            <h2 className="text-3xl md:text-4xl font-semibold text-white mb-4">Thoughts &amp; Insights</h2>
+          </FadeInUp>
+        </div>
+
+        <StaggerContainer className="max-w-3xl space-y-6">
+          {[
+            {
+              title: 'Building a Multi-Agent AI Architecture',
+              desc: 'How Sonora Brain v3 uses MCP servers, memory persistence, and spec-driven development to build AI products systematically.',
+            },
+            {
+              title: 'The Product Builder\'s Creed',
+              desc: 'Why the most valuable people in AI are those who can bridge strategy, design, and technical execution.',
+            },
+            {
+              title: 'SIGNAL: AI in Music Intelligence',
+              desc: 'Building an AI platform that helps record labels discover emerging talent using streaming data and predictive analytics.',
+            },
+            {
+              title: 'AI × Music: The New Creative Frontier',
+              desc: 'How artificial intelligence is reshaping music discovery, creation, and the relationship between artists and technology.',
+            },
+          ].map((article, i) => (
+            <StaggerItem key={i}>
+              <div className="group border-b border-white/[0.04] pb-6 hover:border-white/[0.08] transition-colors cursor-pointer">
+                <h3 className="text-base md:text-lg font-medium text-white/80 group-hover:text-white transition-colors mb-2">
+                  {article.title}
+                </h3>
+                <p className="text-sm text-white/30">{article.desc}</p>
+              </div>
+            </StaggerItem>
+          ))}
+        </StaggerContainer>
+      </SectionContainer>
+
+      {/* ─── CONTACT ─── */}
+      <SectionContainer id="contact">
+        <div className="max-w-3xl mx-auto text-center">
+          <FadeIn>
+            <div className="section-label">Contact</div>
+          </FadeIn>
+          <FadeInUp>
+            <h2 className="text-3xl md:text-4xl font-semibold text-white mb-6 text-balance">
+              Let&apos;s build something together.
+            </h2>
+          </FadeInUp>
+          <FadeInUp delay={0.1}>
+            <p className="text-white/40 text-sm md:text-base max-w-md mx-auto mb-10 leading-relaxed">
+              Looking for a product builder who can take an idea from concept to launch?
+              Let&apos;s talk about your next project.
+            </p>
+          </FadeInUp>
+          <FadeInUp delay={0.2}>
+            <div className="flex flex-wrap items-center justify-center gap-4">
               <a
                 href="mailto:hello@noelnichols.com"
-                className="inline-flex items-center justify-center gap-2 px-8 py-3.5 bg-[#0d0d0d] text-white rounded-full text-sm font-semibold hover:opacity-80 transition-all min-w-[160px]"
+                className="px-6 py-3 bg-white text-black text-sm font-medium rounded-full hover:bg-white/90 transition-all inline-flex items-center gap-2"
               >
-                CONTACTO
+                hello@noelnichols.com
+                <span className="inline-block">→</span>
               </a>
               <a
-                href="https://linkedin.com/in/noelnichols1934"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 px-6 py-3.5 border border-border rounded-full text-sm text-muted-foreground hover:text-foreground hover:border-foreground transition-all"
+                href="https://linkedin.com/in/noelnichols"
+                className="px-6 py-3 text-sm text-white/40 hover:text-white border border-white/[0.08] rounded-full transition-all"
               >
-                LinkedIn <ArrowUpRight className="h-4 w-4" />
+                LinkedIn
               </a>
               <a
                 href="https://github.com/nikkiai809"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 px-6 py-3.5 border border-border rounded-full text-sm text-muted-foreground hover:text-foreground hover:border-foreground transition-all"
+                className="px-6 py-3 text-sm text-white/40 hover:text-white border border-white/[0.08] rounded-full transition-all"
               >
-                GitHub <ArrowUpRight className="h-4 w-4" />
+                GitHub
               </a>
             </div>
-          </div>
+          </FadeInUp>
         </div>
-      </section>
+      </SectionContainer>
     </>
   );
 }

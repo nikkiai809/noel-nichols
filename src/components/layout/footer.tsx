@@ -1,39 +1,22 @@
-import { ArrowUpRight } from 'lucide-react';
+import Link from 'next/link';
 
-const socials = [
-  { label: 'LinkedIn', href: 'https://linkedin.com/in/noelnichols1934' },
-  { label: 'GitHub', href: 'https://github.com/nikkiai809' },
-  { label: 'X / Twitter', href: 'https://x.com/noelnichols' },
-];
-
-export function Footer() {
+export default function Footer() {
   return (
-    <footer className="section pb-12">
-      <div className="container-wide px-6 md:px-8 lg:px-12">
-        <div className="divider mb-12" />
-        <div className="flex flex-col md:flex-row items-start md:items-center justify-between gap-6">
-          <div>
-            <p className="text-sm font-medium">Noel Nichols</p>
-            <p className="text-sm text-muted-foreground mt-0.5">
-              Building products at the intersection of AI, music, and creativity.
-            </p>
-          </div>
-          <div className="flex items-center gap-6">
-            {socials.map((s) => (
-              <a
-                key={s.label}
-                href={s.href}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-sm text-muted-foreground hover:text-foreground transition-colors inline-flex items-center gap-1"
-              >
-                {s.label} <ArrowUpRight className="h-3 w-3" />
-              </a>
-            ))}
-          </div>
+    <footer className="border-t border-white/[0.04] py-8 px-6 md:px-10">
+      <div className="max-w-[1280px] mx-auto flex flex-col md:flex-row items-center justify-between gap-4">
+        <div className="flex items-center gap-6">
+          <Link href="https://github.com/nikkiai809" className="text-xs text-white/30 hover:text-white/60 transition-colors">
+            GitHub
+          </Link>
+          <Link href="https://linkedin.com/in/noelnichols" className="text-xs text-white/30 hover:text-white/60 transition-colors">
+            LinkedIn
+          </Link>
+          <Link href="mailto:hello@noelnichols.com" className="text-xs text-white/30 hover:text-white/60 transition-colors">
+            Email
+          </Link>
         </div>
-        <p className="text-xs text-muted-foreground/50 mt-8">
-          &copy; {new Date().getFullYear()} Noel Nichols
+        <p className="text-xs text-white/20">
+          &copy; {new Date().getFullYear()} Noel Nichols. Built with Next.js.
         </p>
       </div>
     </footer>
