@@ -1,10 +1,10 @@
-import type { NavItem, Article, Capability, RecruiterInfo, EngineeringPrinciple, GitHubRepo } from '@/types';
+import type { NavItem, Article, Capability, RecruiterInfo, EngineeringPrinciple, GitHubRepo, CurrentlyBuilding, HowWorkStep } from '@/types';
 
 export const SITE = {
   name: 'Noel Nichols',
-  title: 'AI Product Builder / AI Engineer',
+  title: 'Founding AI Engineer / AI Product Builder',
   description:
-    'Production AI systems — multi-agent architectures, MCP servers, RAG pipelines, data pipelines, and full-stack AI products built from concept to deployment.',
+    'I build AI products that transform complex business problems into production-ready software. Multi-agent architectures, MCP servers, RAG pipelines, and full-stack AI systems.',
   url: 'https://noel-nichols.vercel.app',
   email: 'noelnichols00@gmail.com',
   social: {
@@ -14,7 +14,7 @@ export const SITE = {
 } as const;
 
 export const RECRUITER_INFO: RecruiterInfo[] = [
-  { label: 'Role', value: 'AI Product Builder / AI Engineer' },
+  { label: 'Role', value: 'Founding AI Engineer / AI Product Builder' },
   { label: 'Focus', value: 'AI Systems, Automation, Product Engineering' },
   { label: 'Stack', value: 'Python, TypeScript, Next.js, MCP, RAG, LLMs' },
   { label: 'Location', value: 'Remote / Americas' },
@@ -220,5 +220,75 @@ export const GITHUB_REPOS: GitHubRepo[] = [
     name: 'SIGNAL Intelligence',
     description: 'AI music intelligence: multi-provider data pipeline, feature store, explainable scoring engine, 382+ automated tests.',
     url: 'https://github.com/sonoradigitalcorp-H/Sonora-Digital-Corp',
+  },
+];
+
+/* ─── CURRENTLY BUILDING ─── */
+
+export const CURRENTLY_BUILDING: CurrentlyBuilding[] = [
+  {
+    product: 'SIGNAL',
+    description: 'AI Music Intelligence — multi-provider scoring, Feature Store, explainable engine.',
+    status: 'active',
+  },
+  {
+    product: 'Sonora Brain v3',
+    description: 'Multi-agent AI architecture — 8+ MCP servers, orchestration, persistent memory.',
+    status: 'active',
+  },
+  {
+    product: 'YAMI',
+    description: 'AI Mental Health — multi-agent conversational support, long-term memory.',
+    status: 'active',
+  },
+  {
+    product: 'AI Agent Workflows',
+    description: 'Automated multi-agent coordination patterns for production AI systems.',
+    status: 'active',
+  },
+  {
+    product: 'MCP Server SDK',
+    description: 'Tooling and SDKs for building MCP-compatible AI servers and agents.',
+    status: 'exploring',
+  },
+  {
+    product: 'LLM Evaluation Framework',
+    description: 'Systematic evaluation pipelines for LLM outputs, latency, and reliability.',
+    status: 'exploring',
+  },
+];
+
+/* ─── HOW I WORK ─── */
+
+export const HOW_WORK_STEPS: HowWorkStep[] = [
+  {
+    step: '01',
+    title: 'Discovery',
+    description: 'Business problem mapping, opportunity sizing, technical feasibility assessment, and success criteria definition.',
+  },
+  {
+    step: '02',
+    title: 'Architecture',
+    description: 'System design: data flow, AI integration points, API boundaries, infrastructure decisions mapped before any code is written.',
+  },
+  {
+    step: '03',
+    title: 'Rapid Prototyping',
+    description: 'Fast iteration on core value: build the risky parts first, validate assumptions, then expand into the full system.',
+  },
+  {
+    step: '04',
+    title: 'AI Integration',
+    description: 'Model selection, prompt engineering, RAG pipeline construction, agent coordination, and memory system design.',
+  },
+  {
+    step: '05',
+    title: 'Testing & QA',
+    description: 'Automated tests from day one: unit, integration, end-to-end. 382+ tests on SIGNAL alone. CI/CD gates every deployment.',
+  },
+  {
+    step: '06',
+    title: 'Production & Iteration',
+    description: 'Deploy, monitor, measure, iterate. Real usage data drives the roadmap. Products are living systems, not static deliverables.',
   },
 ];

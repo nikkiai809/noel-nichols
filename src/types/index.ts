@@ -133,3 +133,19 @@ export interface GitHubRepo {
   url: string;
   language?: string;
 }
+
+/* ─── Currently Building ─── */
+
+export interface CurrentlyBuilding {
+  product: string;
+  description: string;
+  status: 'active' | 'shipped' | 'exploring';
+}
+
+/* ─── How I Work ─── */
+
+export interface HowWorkStep {
+  step: string;
+  title: string;
+  description: string;
+}

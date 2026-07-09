@@ -9,6 +9,7 @@ import {
 import { Container } from '@/components/ui/container';
 import { SectionLabel } from '@/components/ui/section-label';
 import { ProjectCard } from '@/components/project/card';
+import { SignalShowcase } from '@/components/signal-showcase';
 import { projects } from '@/lib/projects';
 import {
   CAPABILITIES,
@@ -20,8 +21,14 @@ import {
   TRUST_SIGNALS,
   ENGINEERING_PRINCIPLES,
   GITHUB_REPOS,
+  CURRENTLY_BUILDING,
+  HOW_WORK_STEPS,
   SITE,
 } from '@/lib/constants';
+
+/* Only top 3 projects get featured prominence */
+const FEATURED_PROJECTS = projects.slice(0, 3);
+const MORE_PROJECTS = projects.slice(3);
 
 export default function Home() {
   return (
@@ -38,24 +45,24 @@ export default function Home() {
             <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-[var(--color-accent-border)] bg-[var(--color-accent-subtle)] mb-6 md:mb-8">
               <span className="w-1.5 h-1.5 rounded-full bg-[var(--color-accent)] animate-pulse" />
               <span className="text-[11px] text-[var(--color-accent-light)] font-mono tracking-wider">
-                AI Product Builder &amp; AI Engineer
+                Founding AI Engineer &amp; AI Product Builder
               </span>
             </div>
           </FadeIn>
 
           <FadeIn delay={0.08}>
             <h1 className="text-[clamp(2.4rem,7vw,5.2rem)] font-semibold leading-[0.92] tracking-[-0.04em] text-balance mb-6 md:mb-8">
-              Production{' '}
-              <span className="gradient-accent">AI systems</span>
+              I build AI products that{' '}
+              <span className="gradient-accent">solve real problems</span>
               <br />
-              <span className="text-[var(--color-fg)]/70">from concept to deployment.</span>
+              <span className="text-[var(--color-fg)]/70">and ship to production.</span>
             </h1>
           </FadeIn>
 
           <FadeIn delay={0.16}>
             <p className="text-sm md:text-base text-[var(--color-fg-muted)] max-w-xl leading-relaxed mb-3">
-              Multi-agent architectures, MCP servers, RAG pipelines, data pipelines, and full-stack AI products
-              that solve real business problems.
+              Multi-agent architectures, MCP servers, RAG pipelines, data pipelines, and full-stack AI systems.
+              I design, engineer, and ship products that transform complex business problems into production software.
             </p>
           </FadeIn>
 
@@ -120,7 +127,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* ─── FEATURED PROJECT: SIGNAL (Enhanced Flagship) ─── */}
+      {/* ─── FEATURED PROJECT: SIGNAL ─── */}
       <Container id="work">
         <div className="mb-14">
           <SectionLabel>Flagship Product</SectionLabel>
@@ -193,32 +200,142 @@ export default function Home() {
         </FadeIn>
       </Container>
 
-      {/* ─── ALL PROJECTS ─── */}
+      {/* ─── WOW MOMENT: INSIDE SIGNAL ─── */}
+      <SignalShowcase />
+
+      {/* ─── FEATURED PROJECTS: TOP 3 ─── */}
       <Container>
         <div className="mb-14">
-          <SectionLabel>All Projects</SectionLabel>
+          <SectionLabel>Featured Products</SectionLabel>
           <FadeIn>
             <h2 className="text-3xl md:text-4xl font-semibold text-[var(--color-fg)] mb-4">
-              AI Products &amp; Platforms
+              Production AI Systems
             </h2>
             <p className="text-sm text-[var(--color-fg-muted)] max-w-lg leading-relaxed">
-              Each project is a complete product engineering journey: architecture, implementation,
-              testing, and deployment across AI, health, analytics, and creative technology.
+              Each product is a complete engineering journey: architecture, implementation, testing, and deployment.
             </p>
           </FadeIn>
         </div>
 
-        <div className="grid md:grid-cols-2 gap-4 md:gap-5">
-          {projects.map((project, i) => (
+        <div className="grid md:grid-cols-3 gap-4 md:gap-5">
+          {FEATURED_PROJECTS.map((project, i) => (
             <ProjectCard key={project.id} project={project} index={i} />
           ))}
+        </div>
+
+        {MORE_PROJECTS.length > 0 && (
+          <FadeIn>
+            <div className="mt-8 pt-8 border-t border-[var(--color-border)]">
+              <details className="group">
+                <summary className="cursor-pointer text-xs text-[var(--color-fg-dim)] hover:text-[var(--color-fg)] transition-colors font-mono tracking-wider list-none flex items-center gap-2">
+                  <span className="inline-block transition-transform duration-300 group-open:rotate-90">&rarr;</span>
+                  More Projects ({MORE_PROJECTS.length})
+                </summary>
+                <div className="grid md:grid-cols-2 gap-4 mt-6">
+                  {MORE_PROJECTS.map((project, i) => (
+                    <ProjectCard key={project.id} project={project} index={i + FEATURED_PROJECTS.length} />
+                  ))}
+                </div>
+              </details>
+            </div>
+          </FadeIn>
+        )}
+      </Container>
+
+      {/* ─── CURRENTLY BUILDING ─── */}
+      <Container>
+        <div className="mb-14">
+          <SectionLabel>Active Development</SectionLabel>
+          <FadeIn>
+            <h2 className="text-3xl md:text-4xl font-semibold text-[var(--color-fg)] mb-4">
+              Currently Building
+            </h2>
+            <p className="text-sm text-[var(--color-fg-muted)] max-w-lg leading-relaxed">
+              Products and infrastructure in active development. Every item ships with tests, documentation, and CI/CD.
+            </p>
+          </FadeIn>
+        </div>
+
+        <FadeInStagger className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
+          {CURRENTLY_BUILDING.map((item) => (
+            <FadeInItem key={item.product}>
+              <div className="card p-5 h-full">
+                <div className="flex items-center gap-2 mb-2">
+                  <span
+                    className={`w-2 h-2 rounded-full ${
+                      item.status === 'active'
+                        ? 'bg-emerald-400 animate-pulse shadow-[0_0_6px_rgba(52,211,153,0.3)]'
+                        : item.status === 'shipped'
+                        ? 'bg-[var(--color-accent)]'
+                        : 'bg-[var(--color-fg-dim)]/40'
+                    }`}
+                  />
+                  <span className="text-[10px] font-mono tracking-wider uppercase text-[var(--color-fg-dim)]">
+                    {item.status === 'active' ? 'Active' : item.status === 'shipped' ? 'Shipped' : 'Exploring'}
+                  </span>
+                </div>
+                <h3 className="text-sm font-semibold text-[var(--color-fg)] mb-1">{item.product}</h3>
+                <p className="text-sm text-[var(--color-fg-muted)] leading-relaxed">{item.description}</p>
+              </div>
+            </FadeInItem>
+          ))}
+        </FadeInStagger>
+      </Container>
+
+      {/* ─── HOW I WORK ─── */}
+      <Container>
+        <div className="mb-14">
+          <SectionLabel>Process</SectionLabel>
+          <FadeIn>
+            <h2 className="text-3xl md:text-4xl font-semibold text-[var(--color-fg)] mb-4">
+              How I Engineer Products
+            </h2>
+            <p className="text-sm text-[var(--color-fg-muted)] max-w-lg leading-relaxed">
+              A repeatable process for transforming problems into production AI systems. Every phase includes deliverables,
+              quality gates, and measurable outcomes.
+            </p>
+          </FadeIn>
+        </div>
+
+        {/* Connected process cards */}
+        <div className="relative">
+          {/* Vertical connector (mobile) */}
+          <div className="absolute left-6 top-0 bottom-0 w-px bg-gradient-to-b from-[var(--color-accent)] via-[var(--color-accent)]/30 to-transparent hidden md:block" />
+
+          <FadeInStagger className="grid md:grid-cols-6 gap-4">
+            {HOW_WORK_STEPS.map((step, i) => (
+              <FadeInItem key={step.step}>
+                <div className="card p-5 h-full relative">
+                  {/* Connector arrow (desktop) */}
+                  {i < HOW_WORK_STEPS.length - 1 && (
+                    <div className="hidden md:block absolute -right-3 top-1/2 -translate-y-1/2 z-10 text-[var(--color-accent)]/30 text-sm">
+                      &rarr;
+                    </div>
+                  )}
+
+                  {/* Step number */}
+                  <div className="flex items-center gap-3 mb-3">
+                    <span className="flex-shrink-0 w-8 h-8 rounded-full bg-[var(--color-accent-subtle)] border border-[var(--color-accent-border)] flex items-center justify-center">
+                      <span className="text-xs font-mono text-[var(--color-accent-light)]">{step.step}</span>
+                    </span>
+                  </div>
+
+                  <h3 className="text-sm font-semibold text-[var(--color-fg)] mb-2">{step.title}</h3>
+                  <p className="text-sm text-[var(--color-fg-muted)] leading-relaxed">{step.description}</p>
+
+                  {/* Bottom accent bar */}
+                  <div className="mt-4 w-8 h-0.5 rounded-full bg-[var(--color-accent)]/40" />
+                </div>
+              </FadeInItem>
+            ))}
+          </FadeInStagger>
         </div>
       </Container>
 
       {/* ─── ENGINEERING PRINCIPLES ─── */}
       <Container>
         <div className="mb-14">
-          <SectionLabel>How Products Are Built</SectionLabel>
+          <SectionLabel>Philosophy</SectionLabel>
           <FadeIn>
             <h2 className="text-3xl md:text-4xl font-semibold text-[var(--color-fg)] mb-4">
               Engineering Principles
@@ -241,7 +358,7 @@ export default function Home() {
         </FadeInStagger>
       </Container>
 
-      {/* ─── NARRATIVE / ENGINEERING JOURNEY ─── */}
+      {/* ─── NARRATIVE / JOURNEY ─── */}
       <Container>
         <div className="mb-14">
           <SectionLabel>Journey</SectionLabel>
@@ -276,30 +393,6 @@ export default function Home() {
         </div>
       </Container>
 
-      {/* ─── PROCESS ─── */}
-      <Container>
-        <div className="mb-14">
-          <SectionLabel>Process</SectionLabel>
-          <FadeIn>
-            <h2 className="text-3xl md:text-4xl font-semibold text-[var(--color-fg)] mb-4">
-              How Products Are Engineered
-            </h2>
-          </FadeIn>
-        </div>
-
-        <FadeInStagger className="grid md:grid-cols-3 gap-4">
-          {PROCESS_STEPS.map((step) => (
-            <FadeInItem key={step.step}>
-              <div className="card p-6 h-full">
-                <span className="text-[10px] font-mono text-[var(--color-fg-dim)] tracking-[0.1em]">{step.step}</span>
-                <h3 className="text-base font-semibold text-[var(--color-fg)] mt-3 mb-2">{step.title}</h3>
-                <p className="text-sm text-[var(--color-fg-muted)] leading-relaxed">{step.description}</p>
-              </div>
-            </FadeInItem>
-          ))}
-        </FadeInStagger>
-      </Container>
-
       {/* ─── ABOUT ─── */}
       <Container id="about">
         <div className="grid md:grid-cols-2 gap-12 md:gap-20 items-start">
@@ -324,7 +417,7 @@ export default function Home() {
 
           <FadeInStagger className="space-y-5">
             {[
-              'SIGNAL predicts emerging artists through explainable AI. Sonora Brain v3 coordinates 8+ MCP servers across a multi-agent architecture. Engram provides persistent memory for AI systems. These are the products — the evidence of what production AI engineering looks like.',
+              'SIGNAL predicts emerging artists through explainable AI across 6 signal dimensions. Sonora Brain v3 coordinates 8+ MCP servers across a multi-agent architecture. Engram provides persistent memory for AI systems. These are the products — the evidence of what production AI engineering looks like.',
               'Multi-agent architectures, MCP servers, RAG pipelines, feature stores, scoring engines, data pipelines, and the frontends that make them useful. Every project ships with automated tests, CI/CD, and deployment infrastructure.',
               'Currently building Sonora Digital Corp, a venture studio with a proprietary multi-agent AI architecture. Previously built AI products across music intelligence (SIGNAL), health (YAMI), and enterprise analytics.',
             ].map((text, i) => (
@@ -350,7 +443,7 @@ export default function Home() {
         </div>
       </Container>
 
-      {/* ─── ENGINEERING CAPABILITIES ─── */}
+      {/* ─── CAPABILITIES ─── */}
       <Container>
         <div className="mb-14">
           <SectionLabel>Capabilities</SectionLabel>
