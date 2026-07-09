@@ -170,3 +170,40 @@ export interface FounderTimelineEvent {
   description: string;
   type: 'founder' | 'product' | 'technology' | 'company';
 }
+
+/* ─── Docs ─── */
+
+export interface DocContent {
+  title: string;
+  slug: string;
+  venture: string;
+  ventureLabel: string;
+  ventureSlug: string;
+  description: string;
+  readingTime: string;
+  lastUpdated: string;
+  tags: string[];
+  sections: DocContentSection[];
+}
+
+export interface DocContentSection {
+  id: string;
+  title: string;
+  type: 'text' | 'callout' | 'list' | 'timeline' | 'card-grid' | 'metrics' | 'arch' | 'quote';
+  body?: string[];
+  items?: string[];
+  calloutTitle?: string;
+  calloutBody?: string;
+  calloutType?: 'info' | 'warning' | 'success';
+  cards?: { title: string; description: string }[];
+  metrics?: { value: string; label: string }[];
+  quote?: string;
+  quoteAttr?: string;
+}
+
+export interface DocVenture {
+  id: string;
+  name: string;
+  description: string;
+  docs: { title: string; slug: string; description: string }[];
+}

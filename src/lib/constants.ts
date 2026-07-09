@@ -24,6 +24,7 @@ export const RECRUITER_INFO: RecruiterInfo[] = [
 
 export const NAV_ITEMS: NavItem[] = [
   { label: 'Ventures', href: '/projects' },
+  { label: 'Docs', href: '/docs' },
   { label: 'Work', href: '/#work' },
   { label: 'About', href: '/#about' },
   { label: 'Contact', href: '/#contact' },
