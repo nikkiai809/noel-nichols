@@ -18,6 +18,8 @@ import {
   RECRUITER_INFO,
   TECH_STACK_HOME,
   TRUST_SIGNALS,
+  ENGINEERING_PRINCIPLES,
+  GITHUB_REPOS,
   SITE,
 } from '@/lib/constants';
 
@@ -43,8 +45,8 @@ export default function Home() {
 
           <FadeIn delay={0.08}>
             <h1 className="text-[clamp(2.4rem,7vw,5.2rem)] font-semibold leading-[0.92] tracking-[-0.04em] text-balance mb-6 md:mb-8">
-              I build{' '}
-              <span className="gradient-accent">production AI systems</span>
+              Production{' '}
+              <span className="gradient-accent">AI systems</span>
               <br />
               <span className="text-[var(--color-fg)]/70">from concept to deployment.</span>
             </h1>
@@ -52,8 +54,8 @@ export default function Home() {
 
           <FadeIn delay={0.16}>
             <p className="text-sm md:text-base text-[var(--color-fg-muted)] max-w-xl leading-relaxed mb-3">
-              Multi-agent architectures, MCP servers, RAG pipelines, data pipelines, and full-stack AI products.
-              I design, engineer, and ship AI systems that solve real business problems.
+              Multi-agent architectures, MCP servers, RAG pipelines, data pipelines, and full-stack AI products
+              that solve real business problems.
             </p>
           </FadeIn>
 
@@ -74,14 +76,14 @@ export default function Home() {
                 href="/projects"
                 className="group inline-flex items-center gap-2 px-6 py-3 rounded-full bg-[var(--color-accent)] text-white text-sm font-medium hover:bg-[var(--color-accent-light)] transition-all shadow-md hover:shadow-lg"
               >
-                View Projects
+                Explore Projects
                 <span className="inline-block transition-transform duration-300 group-hover:translate-x-1">&rarr;</span>
               </Link>
               <Link
                 href="/#contact"
                 className="px-6 py-3 text-sm text-[var(--color-fg-dim)] border border-[var(--color-border)] rounded-full hover:border-[var(--color-border-hover)] hover:text-[var(--color-fg)] transition-all"
               >
-                Contact Me
+                Contact
               </Link>
               <a
                 href="/resume.pdf"
@@ -118,24 +120,29 @@ export default function Home() {
         </div>
       </section>
 
-      {/* ─── FEATURED PROJECT: SIGNAL ─── */}
+      {/* ─── FEATURED PROJECT: SIGNAL (Enhanced Flagship) ─── */}
       <Container id="work">
         <div className="mb-14">
-          <SectionLabel>Flagship Project</SectionLabel>
+          <SectionLabel>Flagship Product</SectionLabel>
           <FadeIn>
             <h2 className="text-3xl md:text-4xl font-semibold text-[var(--color-fg)] mb-4">
               SIGNAL — AI Music Intelligence
             </h2>
             <p className="text-sm text-[var(--color-fg-muted)] max-w-xl leading-relaxed">
-              A multi-provider AI platform with explainable scoring, feature store architecture,
-              real-time data pipelines, and 382+ automated tests. My most technically ambitious project.
+              Predicts emerging artists through explainable AI scoring across Spotify, YouTube, and TikTok.
+              Built with a Feature Store architecture, multi-provider data pipeline, and 382+ automated tests.
             </p>
           </FadeIn>
         </div>
 
         <FadeIn>
           <Link href="/projects/signal" className="group block">
-            <div className="card p-8 md:p-12 group-hover:translate-y-[-4px] transition-all duration-400 glow-amber">
+            <div className="card p-8 md:p-12 group-hover:translate-y-[-4px] transition-all duration-400 glow-amber relative">
+              <div className="absolute top-0 right-0 p-3 md:p-4">
+                <span className="text-[9px] font-mono px-2 py-0.5 rounded-full border border-[var(--color-accent-border)] bg-[var(--color-accent)]/5 text-[var(--color-accent-light)] tracking-wider uppercase">
+                  Featured
+                </span>
+              </div>
               <div className="grid md:grid-cols-2 gap-8 items-start">
                 <div>
                   <div className="flex items-center gap-3 mb-4">
@@ -146,17 +153,22 @@ export default function Home() {
                     SIGNAL
                   </h3>
                   <p className="text-sm text-[var(--color-fg-muted)] leading-relaxed mb-5">
-                    AI-powered music intelligence platform connecting Spotify, YouTube, and TikTok data
-                    through a Feature Store architecture with an explainable AI scoring engine.
+                    Multi-provider AI platform connecting streaming data through a Feature Store
+                    with an explainable scoring engine. 12 architecture components, 4 pipeline stages,
+                    6 signal dimensions, enterprise API.
                   </p>
                   <div className="flex flex-wrap gap-1.5 mb-6">
-                    {['TensorFlow', 'FastAPI', 'Feature Store', '382+ Tests', 'Explainable AI', 'Real-time'].map((t) => (
+                    {['TensorFlow', 'FastAPI', 'Feature Store', '382+ Tests', 'Explainable AI', 'Real-time', 'API'].map((t) => (
                       <span key={t} className="badge badge-accent">{t}</span>
                     ))}
                   </div>
-                  <span className="inline-flex items-center gap-1.5 text-xs text-[var(--color-accent-light)] group-hover:gap-2 transition-all">
-                    Read full case study <span>&rarr;</span>
-                  </span>
+                  <div className="flex flex-wrap gap-3 text-xs">
+                    <span className="inline-flex items-center gap-1.5 text-[var(--color-accent-light)] group-hover:gap-2 transition-all">
+                      Read full case study <span>&rarr;</span>
+                    </span>
+                    <span className="text-[var(--color-fg-dim)]/40">|</span>
+                    <span className="text-[var(--color-fg-dim)]">6 sections &middot; 12 architecture layers</span>
+                  </div>
                 </div>
                 <div className="hidden md:flex flex-col gap-3">
                   <div className="grid grid-cols-2 gap-3">
@@ -164,9 +176,11 @@ export default function Home() {
                       { value: '382+', label: 'Automated Tests' },
                       { value: '5+', label: 'Data Sources' },
                       { value: '5K+', label: 'Artists Scored' },
-                      { value: '3', label: 'Pipeline Stages' },
+                      { value: '6', label: 'Signal Dimensions' },
+                      { value: '12', label: 'Architecture Layers' },
+                      { value: 'Real-time', label: 'Inference Pipeline' },
                     ].map((m) => (
-                      <div key={m.label} className="card p-4 text-center">
+                      <div key={m.label} className="card p-3 text-center">
                         <div className="text-lg font-semibold text-[var(--color-fg)]">{m.value}</div>
                         <div className="text-[10px] text-[var(--color-fg-dim)] mt-0.5">{m.label}</div>
                       </div>
@@ -189,7 +203,7 @@ export default function Home() {
             </h2>
             <p className="text-sm text-[var(--color-fg-muted)] max-w-lg leading-relaxed">
               Each project is a complete product engineering journey: architecture, implementation,
-              testing, and deployment. AI platforms, automation systems, and digital ventures.
+              testing, and deployment across AI, health, analytics, and creative technology.
             </p>
           </FadeIn>
         </div>
@@ -199,6 +213,32 @@ export default function Home() {
             <ProjectCard key={project.id} project={project} index={i} />
           ))}
         </div>
+      </Container>
+
+      {/* ─── ENGINEERING PRINCIPLES ─── */}
+      <Container>
+        <div className="mb-14">
+          <SectionLabel>How Products Are Built</SectionLabel>
+          <FadeIn>
+            <h2 className="text-3xl md:text-4xl font-semibold text-[var(--color-fg)] mb-4">
+              Engineering Principles
+            </h2>
+            <p className="text-sm text-[var(--color-fg-muted)] max-w-lg leading-relaxed">
+              Every product follows the same engineering philosophy — production-first, explainable, automated, data-driven, scalable, and user-centered.
+            </p>
+          </FadeIn>
+        </div>
+
+        <FadeInStagger className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
+          {ENGINEERING_PRINCIPLES.map((p) => (
+            <FadeInItem key={p.title}>
+              <div className="card p-6 h-full border-l-2 border-[var(--color-accent)]">
+                <h3 className="text-sm font-semibold text-[var(--color-fg)] mb-2">{p.title}</h3>
+                <p className="text-sm text-[var(--color-fg-muted)] leading-relaxed">{p.description}</p>
+              </div>
+            </FadeInItem>
+          ))}
+        </FadeInStagger>
       </Container>
 
       {/* ─── NARRATIVE / ENGINEERING JOURNEY ─── */}
@@ -242,7 +282,7 @@ export default function Home() {
           <SectionLabel>Process</SectionLabel>
           <FadeIn>
             <h2 className="text-3xl md:text-4xl font-semibold text-[var(--color-fg)] mb-4">
-              How I Engineer Products
+              How Products Are Engineered
             </h2>
           </FadeIn>
         </div>
@@ -267,7 +307,7 @@ export default function Home() {
             <SectionLabel>About</SectionLabel>
             <FadeIn>
               <h2 className="text-3xl md:text-4xl font-semibold text-[var(--color-fg)] mb-6">
-                I build AI systems end-to-end — from architecture to deployment.
+                AI products engineered end-to-end — from architecture to deployment.
               </h2>
             </FadeIn>
             <FadeIn delay={0.1}>
@@ -284,9 +324,9 @@ export default function Home() {
 
           <FadeInStagger className="space-y-5">
             {[
-              "I'm an AI product builder and engineer who combines software engineering, AI architecture, and product strategy to create production systems that solve real problems. My background spans multi-agent AI architectures, data pipelines, API design, and full-stack development — with a focus on shipping products that work.",
-              'I build across the AI stack: MCP servers, RAG pipelines, feature stores, scoring engines, and the frontends that make them useful. Every project includes automated tests, CI/CD, and deployment infrastructure.',
-              'Currently building Sonora Digital Corp, a venture studio with a proprietary multi-agent AI architecture (Sonora Brain v3). Previously built AI products across music intelligence, health, and enterprise automation.',
+              'SIGNAL predicts emerging artists through explainable AI. Sonora Brain v3 coordinates 8+ MCP servers across a multi-agent architecture. Engram provides persistent memory for AI systems. These are the products — the evidence of what production AI engineering looks like.',
+              'Multi-agent architectures, MCP servers, RAG pipelines, feature stores, scoring engines, data pipelines, and the frontends that make them useful. Every project ships with automated tests, CI/CD, and deployment infrastructure.',
+              'Currently building Sonora Digital Corp, a venture studio with a proprietary multi-agent AI architecture. Previously built AI products across music intelligence (SIGNAL), health (YAMI), and enterprise analytics.',
             ].map((text, i) => (
               <FadeInItem key={i}>
                 <p className="text-sm md:text-base text-[var(--color-fg-muted)] leading-relaxed">{text}</p>
@@ -310,13 +350,13 @@ export default function Home() {
         </div>
       </Container>
 
-      {/* ─── CAPABILITIES ─── */}
+      {/* ─── ENGINEERING CAPABILITIES ─── */}
       <Container>
         <div className="mb-14">
           <SectionLabel>Capabilities</SectionLabel>
           <FadeIn>
             <h2 className="text-3xl md:text-4xl font-semibold text-[var(--color-fg)] mb-4">
-              What I Build
+              What Ships
             </h2>
           </FadeIn>
         </div>
@@ -339,7 +379,7 @@ export default function Home() {
           <SectionLabel>Stack</SectionLabel>
           <FadeIn>
             <h2 className="text-3xl md:text-4xl font-semibold text-[var(--color-fg)] mb-4">
-              Technology &amp; Tools
+              Technology &amp; Infrastructure
             </h2>
           </FadeIn>
         </div>
@@ -360,6 +400,58 @@ export default function Home() {
         </FadeInStagger>
       </Container>
 
+      {/* ─── GITHUB REPOS ─── */}
+      <Container id="github">
+        <div className="mb-14">
+          <SectionLabel>Source</SectionLabel>
+          <FadeIn>
+            <h2 className="text-3xl md:text-4xl font-semibold text-[var(--color-fg)] mb-4">
+              Active Repositories
+            </h2>
+            <p className="text-sm text-[var(--color-fg-muted)] max-w-lg leading-relaxed">
+              Production AI infrastructure and products. Every repository ships with tests, documentation, and CI/CD.
+            </p>
+          </FadeIn>
+        </div>
+
+        <FadeInStagger className="grid md:grid-cols-2 gap-4">
+          {GITHUB_REPOS.map((repo) => (
+            <FadeInItem key={repo.name}>
+              <a href={repo.url} target="_blank" rel="noopener noreferrer" className="group block">
+                <div className="card p-5 h-full group-hover:translate-y-[-3px] transition-all duration-400">
+                  <div className="flex items-center gap-2 mb-3">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" className="text-[var(--color-fg-dim)]">
+                      <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22" />
+                    </svg>
+                    <h3 className="text-sm font-semibold text-[var(--color-fg)] group-hover:text-[var(--color-accent-light)] transition-colors">
+                      {repo.name}
+                    </h3>
+                  </div>
+                  <p className="text-sm text-[var(--color-fg-muted)] leading-relaxed">{repo.description}</p>
+                </div>
+              </a>
+            </FadeInItem>
+          ))}
+        </FadeInStagger>
+
+        <FadeIn>
+          <div className="mt-8 text-center">
+            <a
+              href={SITE.social.github}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 px-5 py-3 text-xs text-[var(--color-fg-dim)] border border-[var(--color-border)] rounded-full hover:border-[var(--color-border-hover)] hover:text-[var(--color-fg)] transition-all"
+            >
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
+                <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22" />
+              </svg>
+              View All Repositories on GitHub
+              <span>&rarr;</span>
+            </a>
+          </div>
+        </FadeIn>
+      </Container>
+
       {/* ─── WRITING ─── */}
       <Container id="writing">
         <div className="mb-14">
@@ -374,7 +466,7 @@ export default function Home() {
         <FadeInStagger className="max-w-2xl space-y-6">
           {ARTICLES.map((article) => (
             <FadeInItem key={article.title}>
-              <article className="group border-b border-[var(--color-border)] pb-6 hover:border-[var(--color-border-hover)] transition-colors cursor-pointer">
+              <article className="group border-b border-[var(--color-border)] pb-6 hover:border-[var(--color-border-hover)] transition-colors">
                 <div className="flex items-center gap-3 mb-2">
                   <span className="text-[10px] font-mono text-[var(--color-fg-dim)]">{article.date}</span>
                 </div>
@@ -392,19 +484,19 @@ export default function Home() {
           <SectionLabel>Contact</SectionLabel>
           <FadeIn>
             <h2 className="text-3xl md:text-4xl font-semibold text-[var(--color-fg)] mb-6 text-balance">
-              Building AI products? I build them.
+              Building AI products? These systems ship.
             </h2>
           </FadeIn>
           <FadeIn delay={0.1}>
             <p className="text-sm text-[var(--color-fg-muted)] max-w-md mx-auto mb-10 leading-relaxed">
-              I&apos;m open to founding engineer, AI product builder, and product engineering roles.
-              AI systems, automation, product engineering — from concept to production.
+              Open to founding engineer, AI product builder, and product engineering roles.
+              Production AI systems, multi-agent architectures, and product engineering — from concept to deployment.
             </p>
           </FadeIn>
           <FadeIn delay={0.2}>
             <div className="flex flex-wrap items-center justify-center gap-3">
               <a href={`mailto:${SITE.email}`} className="group inline-flex items-center gap-2 px-6 py-3 rounded-full bg-[var(--color-accent)] text-white text-sm font-medium hover:bg-[var(--color-accent-light)] transition-all">
-                Let&apos;s Talk
+                Start a Conversation
                 <span className="inline-block transition-transform duration-300 group-hover:translate-x-1">&rarr;</span>
               </a>
               <a href="/resume.pdf" className="inline-flex items-center gap-2 px-5 py-3 text-sm text-[var(--color-fg-dim)] border border-[var(--color-border)] rounded-full hover:border-[var(--color-border-hover)] hover:text-[var(--color-fg)] transition-all">

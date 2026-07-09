@@ -10,6 +10,12 @@ export interface ArchNode {
   primary?: boolean;
 }
 
+export interface ArchBlock {
+  layer: string;
+  components: string[];
+  description: string;
+}
+
 export interface Challenge {
   title: string;
   body: string;
@@ -26,15 +32,38 @@ export interface Screenshot {
   color: string;
 }
 
+export interface ApiExample {
+  endpoint: string;
+  method: string;
+  description: string;
+}
+
+export interface RoadmapItem {
+  phase: string;
+  title: string;
+  description: string;
+  status?: 'completed' | 'in-progress' | 'planned';
+}
+
+export interface FeatureCard {
+  title: string;
+  description: string;
+  icon?: string;
+}
+
 export interface CaseSection {
   id: string;
   title: string;
   body: string[];
-  variant?: 'text' | 'architecture' | 'features' | 'challenges' | 'lessons' | 'gallery';
+  variant?: 'text' | 'architecture' | 'features' | 'challenges' | 'lessons' | 'gallery' | 'timeline' | 'feature-cards' | 'api-examples' | 'roadmap' | 'arch-blocks';
   features?: string[];
   challenges?: Challenge[];
   lessons?: Lesson[];
   screenshots?: Screenshot[];
+  featureCards?: FeatureCard[];
+  apiExamples?: ApiExample[];
+  roadmap?: RoadmapItem[];
+  archBlocks?: ArchBlock[];
 }
 
 export interface TechCategory {
@@ -87,4 +116,20 @@ export interface Capability {
 export interface RecruiterInfo {
   label: string;
   value: string;
+}
+
+/* ─── Engineering Principles ─── */
+
+export interface EngineeringPrinciple {
+  title: string;
+  description: string;
+}
+
+/* ─── GitHub Repos ─── */
+
+export interface GitHubRepo {
+  name: string;
+  description: string;
+  url: string;
+  language?: string;
 }

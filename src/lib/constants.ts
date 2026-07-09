@@ -1,10 +1,10 @@
-import type { NavItem, Article, Capability, RecruiterInfo } from '@/types';
+import type { NavItem, Article, Capability, RecruiterInfo, EngineeringPrinciple, GitHubRepo } from '@/types';
 
 export const SITE = {
   name: 'Noel Nichols',
   title: 'AI Product Builder / AI Engineer',
   description:
-    'I build production-ready AI systems. Multi-agent architectures, MCP servers, RAG pipelines, and full-stack AI products from concept to deployment.',
+    'Production AI systems — multi-agent architectures, MCP servers, RAG pipelines, data pipelines, and full-stack AI products built from concept to deployment.',
   url: 'https://noel-nichols.vercel.app',
   email: 'noelnichols00@gmail.com',
   social: {
@@ -96,7 +96,7 @@ export const PROCESS_STEPS = [
     step: '03',
     title: 'Ship & Scale',
     description:
-      'Deploy fast, measure everything, iterate based on real usage. Products are living systems — I build for continuous improvement.',
+      'Deploy fast, measure everything, iterate based on real usage. Products are living systems — built for continuous improvement.',
   },
 ];
 
@@ -104,12 +104,12 @@ export const NARRATIVE_STEPS = [
   {
     era: '2020',
     label: 'Engineering Foundations',
-    description: 'Built automation systems and discovered how code replaces manual processes at scale. Python, APIs, and data pipelines.',
+    description: 'Automation systems at scale: Python, APIs, and data pipelines that replaced manual processes with reliable, testable code.',
   },
   {
     era: '2021',
     label: 'AI Engineering',
-    description: 'Dove into machine learning and AI. Built predictive models, recommendation engines, and the first generation of AI-powered products.',
+    description: 'Machine learning and AI products: predictive models, recommendation engines, and first-generation AI applications deployed to production.',
   },
   {
     era: '2022',
@@ -124,7 +124,7 @@ export const NARRATIVE_STEPS = [
   {
     era: '2024+',
     label: 'Founder & AI Product Builder',
-    description: 'Founded Sonora Digital Corp. Building a venture studio that creates production AI products across music intelligence, health, and enterprise automation.',
+    description: 'Founded Sonora Digital Corp. Building production AI products across music intelligence, health, content, compliance, and streaming analytics.',
   },
 ];
 
@@ -155,5 +155,70 @@ export const TECH_STACK_HOME = [
   {
     category: 'Infrastructure',
     items: ['Docker', 'AWS', 'Vercel', 'GitHub Actions', 'CI/CD'],
+  },
+];
+
+/* ─── ENGINEERING PRINCIPLES ─── */
+
+export const ENGINEERING_PRINCIPLES: EngineeringPrinciple[] = [
+  {
+    title: 'Production-First Development',
+    description:
+      'Code is only valuable when it ships. Every feature is built with deployment, monitoring, and iteration in mind — not just local development.',
+  },
+  {
+    title: 'Explainable AI Over Black-Box',
+    description:
+      'AI decisions must be auditable. Every model output reveals its source data, weighting, and confidence level — designed for trust from day one.',
+  },
+  {
+    title: 'Automation Before Manual Processes',
+    description:
+      'If a task can be automated, it should be. Tests, deployment, data pipelines, and infrastructure are codified, not handled manually.',
+  },
+  {
+    title: 'Data-Driven Product Decisions',
+    description:
+      'Products improve through measurement. Usage patterns, performance metrics, and user behavior inform every iteration and roadmap decision.',
+  },
+  {
+    title: 'Scalable Architectures from Day One',
+    description:
+      'Architecture decisions anticipate growth. Modular design, clean interfaces, and loose coupling ensure systems evolve without rewrites.',
+  },
+  {
+    title: 'User-Centered AI Systems',
+    description:
+      'AI augments human judgment — it does not replace it. Interfaces surface AI insights with context, evidence, and user control over final decisions.',
+  },
+];
+
+/* ─── GITHUB REPOS ─── */
+
+export const GITHUB_REPOS: GitHubRepo[] = [
+  {
+    name: 'Sonora Brain v3',
+    description: 'Multi-agent AI architecture: MCP-based orchestration, persistent memory, spec-driven development, and 8+ MCP servers for production AI products.',
+    url: 'https://github.com/sonoradigitalcorp-H/Sonora-Digital-Corp',
+  },
+  {
+    name: 'Engram Memory Server',
+    description: 'MCP server for persistent AI memory: vector search, RAG, knowledge graphs, and cross-session context management.',
+    url: 'https://github.com/sonoradigitalcorp-H/Sonora-Digital-Corp',
+  },
+  {
+    name: 'GBrain Orchestrator',
+    description: 'Multi-agent orchestration layer: Cortex planner + Thalamus router for coordinating specialized AI agents through MCP.',
+    url: 'https://github.com/sonoradigitalcorp-H/Sonora-Digital-Corp',
+  },
+  {
+    name: 'OpenClaw Gateway',
+    description: 'Dual-mode MCP + HTTP gateway for AI products. Routes messages, manages channels, and provides REST API access to AI systems.',
+    url: 'https://github.com/sonoradigitalcorp-H/Sonora-Digital-Corp',
+  },
+  {
+    name: 'SIGNAL Intelligence',
+    description: 'AI music intelligence: multi-provider data pipeline, feature store, explainable scoring engine, 382+ automated tests.',
+    url: 'https://github.com/sonoradigitalcorp-H/Sonora-Digital-Corp',
   },
 ];
