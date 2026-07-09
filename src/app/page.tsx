@@ -33,10 +33,10 @@ export default function Home() {
   return (
     <>
       {/* ─── HERO ─── */}
-      <section className="relative min-h-screen flex items-center px-6 md:px-10 overflow-hidden">
+      <section className="relative min-h-screen flex items-center px-4 md:px-10 overflow-hidden">
         <div className="absolute inset-0 z-0 pointer-events-none">
           <div className="absolute inset-0 bg-gradient-to-b from-[var(--color-accent-subtle)] via-transparent to-transparent opacity-30" />
-          <div className="absolute top-1/4 left-1/2 -translate-x-1/2 w-[700px] h-[700px] bg-[var(--color-accent)]/2 rounded-full blur-[120px]" />
+          <div className="absolute top-1/4 left-1/2 -translate-x-1/2 w-[300px] h-[300px] md:w-[700px] md:h-[700px] bg-[var(--color-accent)]/2 rounded-full blur-[80px] md:blur-[120px]" />
         </div>
 
         <div className="max-w-[1200px] mx-auto w-full relative z-10 pt-24">
@@ -67,8 +67,8 @@ export default function Home() {
             <div className="flex flex-wrap gap-x-6 gap-y-1.5 mb-8 text-xs text-[var(--color-fg-dim)]">
               {RECRUITER_INFO.slice(0, 4).map((info) => (
                 <span key={info.label}>
-                  <span className="text-[var(--color-fg-dim)]/50">{info.label}: </span>
-                  <span className="text-[var(--color-fg)]/70">{info.value}</span>
+                  <span className="text-[var(--color-fg-dim)]">{info.label}: </span>
+                  <span className="text-[var(--color-fg)]">{info.value}</span>
                 </span>
               ))}
             </div>
@@ -105,7 +105,7 @@ export default function Home() {
         </div>
 
         <div className="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 z-10">
-          <span className="text-[10px] text-[var(--color-fg-dim)]/40 font-mono tracking-[0.15em]">SCROLL</span>
+          <span className="text-[10px] text-[var(--color-fg-dim)]/60 font-mono tracking-[0.15em]">SCROLL</span>
           <div className="w-px h-8 bg-gradient-to-b from-[var(--color-fg-dim)]/30 to-transparent" />
         </div>
       </section>

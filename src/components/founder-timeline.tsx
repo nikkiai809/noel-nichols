@@ -57,7 +57,7 @@ export function FounderTimeline({ events }: Props) {
                     {event.era}
                   </span>
                   <span
-                    className={`text-[9px] font-mono px-1.5 py-0.5 rounded ${typeColors[event.type]} bg-opacity-20 text-[var(--color-fg-dim)]/80`}
+                    className={`text-[9px] font-mono px-1.5 py-0.5 rounded ${typeColors[event.type]} bg-opacity-20 text-[var(--color-fg-muted)]`}
                   >
                     {typeLabels[event.type]}
                   </span>

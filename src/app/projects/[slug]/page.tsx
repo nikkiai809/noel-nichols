@@ -79,12 +79,12 @@ export default async function CaseStudyPage({ params }: Props) {
 
           <div className="flex flex-wrap items-center gap-4 text-xs text-[var(--color-fg-dim)]">
             <span>
-              <span className="text-[var(--color-fg-dim)]/50">Role: </span>
+              <span className="text-[var(--color-fg-dim)]">Role: </span>
               <span className="text-[var(--color-fg)]/80">{project.role}</span>
             </span>
             <span className="text-[var(--color-border)]">/</span>
             <span>
-              <span className="text-[var(--color-fg-dim)]/50">Category: </span>
+              <span className="text-[var(--color-fg-dim)]">Category: </span>
               <span className="text-[var(--color-fg)]/80">{project.category}</span>
             </span>
             {project.url && project.url !== '#' && (

@@ -1,9 +1,11 @@
 import Link from 'next/link';
 import { notFound } from 'next/navigation';
+import type { Metadata } from 'next';
 import { docVentures, getDoc, getAdjacentDocs, getRelatedDocs } from '@/lib/docs';
 import { DocSidebar } from '@/components/docs/doc-sidebar';
 import { DocNavigation } from '@/components/docs/doc-navigation';
 import { DocSectionRenderer } from '@/components/docs/doc-section-renderer';
+import { SITE } from '@/lib/constants';
 
 export function generateStaticParams() {
   const params: { venture: string; slug: string }[] = [];
@@ -13,6 +15,24 @@ export function generateStaticParams() {
     }
   }
   return params;
+}
+
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ venture: string; slug: string }>;
+}): Promise<Metadata> {
+  const { venture, slug } = await params;
+  const doc = getDoc(venture, slug);
+  if (!doc) return {};
+  return {
+    title: `${doc.title} — ${doc.ventureLabel} Documentation`,
+    description: doc.description,
+    openGraph: {
+      title: `${doc.title} — ${doc.ventureLabel}`,
+      description: doc.description,
+    },
+  };
 }
 
 export default async function DocPage({
@@ -31,10 +51,10 @@ export default async function DocPage({
   const related = getRelatedDocs(doc, 3);
 
   return (
-    <main className="min-h-screen py-24 px-6">
+    <main className="min-h-screen py-20 md:py-24 px-4 md:px-6">
       <div className="max-w-6xl mx-auto">
-        <div className="flex gap-12">
-          {/* Sidebar */}
+        <div className="flex flex-col lg:flex-row gap-8 lg:gap-12">
+          {/* Sidebar — hidden on mobile, show on lg+ */}
           <DocSidebar venture={vData} currentSlug={slug} />
 
           {/* Main content */}
@@ -47,7 +67,7 @@ export default async function DocPage({
               >
                 ← All Ventures
               </Link>
-              <span className="text-xs text-[var(--color-fg-muted)]/40 mx-2">/</span>
+              <span className="text-xs text-[var(--color-fg-dim)] mx-2">/</span>
               <Link
                 href={`/docs/${venture}`}
                 className="text-xs text-[var(--color-fg-muted)] hover:text-[var(--color-accent)] transition-colors"
@@ -67,10 +87,10 @@ export default async function DocPage({
                     {tag}
                   </span>
                 ))}
-                <span className="text-[10px] text-[var(--color-fg-muted)]/40">
+                <span className="text-[10px] text-[var(--color-fg-dim)]">
                   {doc.readingTime}
                 </span>
-                <span className="text-[10px] text-[var(--color-fg-muted)]/40">
+                <span className="text-[10px] text-[var(--color-fg-dim)]">
                   Updated {doc.lastUpdated}
                 </span>
               </div>
@@ -135,14 +155,14 @@ export default async function DocPage({
                 <h3 className="text-sm font-semibold text-[var(--color-fg)] mb-4">
                   Related Documents
                 </h3>
-                <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
+                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3">
                   {related.map((r) => (
                     <Link
                       key={r.slug}
                       href={`/docs/${r.ventureSlug}/${r.slug}`}
                       className="group rounded-lg border border-[var(--color-fg)]/10 p-4 hover:border-[var(--color-accent)]/30 transition-all"
                     >
-                      <span className="text-[10px] uppercase tracking-wider text-[var(--color-fg-muted)]/50">
+                      <span className="text-[10px] uppercase tracking-wider text-[var(--color-fg-dim)]">
                         {r.ventureLabel}
                       </span>
                       <h4 className="text-sm font-medium text-[var(--color-fg)] group-hover:text-[var(--color-accent)] transition-colors mt-1">
@@ -159,7 +179,7 @@ export default async function DocPage({
 
             {/* Footer */}
             <div className="mt-12 pt-6 border-t border-[var(--color-fg)]/10 text-center">
-              <p className="text-xs text-[var(--color-fg-muted)]/40">
+              <p className="text-xs text-[var(--color-fg-dim)]">
                 Last updated {doc.lastUpdated} · {doc.readingTime} ·{' '}
                 {doc.ventureLabel} Documentation
               </p>

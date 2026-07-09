@@ -71,7 +71,7 @@ function PipelineVisualizer() {
                 </span>
 
                 {/* Description on hover */}
-                <span className="text-[9px] text-[var(--color-fg-dim)]/60 leading-relaxed max-w-[130px] opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                <span className="text-[9px] text-[var(--color-fg-muted)] leading-relaxed max-w-[130px] opacity-0 group-hover:opacity-100 group-focus-within:opacity-100 transition-opacity duration-300">
                   {stage.description}
                 </span>
               </div>
@@ -101,7 +101,7 @@ function PipelineVisualizer() {
                 >
                   {stage.label}
                 </span>
-                <p className="text-[10px] text-[var(--color-fg-dim)]/60 mt-0.5">{stage.description}</p>
+                <p className="text-[10px] text-[var(--color-fg-dim)] mt-0.5">{stage.description}</p>
               </div>
             </div>
           ))}
@@ -120,7 +120,7 @@ function ScoringGrid() {
         <FadeInItem key={dim.label}>
           <div className="card p-4 text-center h-full">
             <div className="text-xs font-semibold text-[var(--color-accent-light)] mb-1">{dim.label}</div>
-            <div className="text-[10px] text-[var(--color-fg-dim)]/70 leading-relaxed">{dim.value}</div>
+            <div className="text-[10px] text-[var(--color-fg-dim)] leading-relaxed">{dim.value}</div>
           </div>
         </FadeInItem>
       ))}
@@ -132,11 +132,11 @@ function ScoringGrid() {
 
 export function SignalShowcase() {
   return (
-    <section className="px-6 md:px-10 py-16 md:py-24 relative overflow-hidden">
+    <section className="px-4 md:px-10 py-16 md:py-24 relative overflow-hidden">
       {/* Background ambiance */}
       <div className="absolute inset-0 pointer-events-none">
         <div className="absolute inset-0 bg-gradient-to-b from-[var(--color-accent-subtle)]/20 via-transparent to-[var(--color-accent-subtle)]/10" />
-        <div className="absolute top-1/3 left-1/2 -translate-x-1/2 w-[800px] h-[400px] bg-[var(--color-accent)]/1 rounded-full blur-[150px]" />
+        <div className="absolute top-1/3 left-1/2 -translate-x-1/2 w-[300px] h-[300px] md:w-[800px] md:h-[400px] bg-[var(--color-accent)]/1 rounded-full blur-[80px] md:blur-[150px]" />
       </div>
 
       <div className="max-w-[1200px] mx-auto relative z-10">

@@ -155,7 +155,7 @@ function RoadmapSection({ items }: { items: NonNullable<CaseSection['roadmap']> 
                 <span className="text-[10px] font-mono text-[var(--color-accent-light)]">&#9679; In Progress</span>
               )}
               {item.status === 'planned' && (
-                <span className="text-[10px] font-mono text-[var(--color-fg-dim)]/50">&#9679; Planned</span>
+                <span className="text-[10px] font-mono text-[var(--color-fg-dim)]">&#9679; Planned</span>
               )}
             </div>
             <h3 className="text-sm font-semibold text-[var(--color-fg)] mb-1">{item.title}</h3>

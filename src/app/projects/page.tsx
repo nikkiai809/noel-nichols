@@ -9,7 +9,7 @@ import { projects } from '@/lib/projects';
 export default function ProjectsPage() {
   return (
     <>
-      <Container className="pt-32 md:pt-40">
+      <Container className="pt-20 md:pt-28">
         <div className="mb-16">
           <SectionLabel>Ventures</SectionLabel>
           <FadeIn>

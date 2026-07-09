@@ -71,13 +71,13 @@ export default async function VentureHubPage({
                     {doc.tags.map((tag) => (
                       <span
                         key={tag}
-                        className="text-[10px] uppercase tracking-wider text-[var(--color-fg-muted)]/60 border border-[var(--color-fg)]/10 rounded-full px-2 py-0.5"
+                        className="text-[10px] uppercase tracking-wider text-[var(--color-fg-dim)] border border-[var(--color-fg)]/10 rounded-full px-2 py-0.5"
                       >
                         {tag}
                       </span>
                     ))}
                     {i > 0 && (
-                      <span className="text-[10px] text-[var(--color-fg-muted)]/40">
+                      <span className="text-[10px] text-[var(--color-fg-dim)]">
                         {i + 1} of {docs.length}
                       </span>
                     )}

@@ -8,7 +8,7 @@ export default function Footer() {
         <div className="flex items-center gap-6">
           <Link
             href={SITE.social.github}
-            className="text-xs text-[var(--color-fg-dim)] hover:text-[var(--color-fg-muted)] transition-colors"
+            className="text-xs text-[var(--color-fg-muted)] hover:text-[var(--color-fg)] transition-colors"
             target="_blank"
             rel="noopener noreferrer"
           >
@@ -16,7 +16,7 @@ export default function Footer() {
           </Link>
           <Link
             href={SITE.social.linkedin}
-            className="text-xs text-[var(--color-fg-dim)] hover:text-[var(--color-fg-muted)] transition-colors"
+            className="text-xs text-[var(--color-fg-muted)] hover:text-[var(--color-fg)] transition-colors"
             target="_blank"
             rel="noopener noreferrer"
           >
@@ -24,12 +24,12 @@ export default function Footer() {
           </Link>
           <Link
             href={`mailto:${SITE.email}`}
-            className="text-xs text-[var(--color-fg-dim)] hover:text-[var(--color-fg-muted)] transition-colors"
+            className="text-xs text-[var(--color-fg-muted)] hover:text-[var(--color-fg)] transition-colors"
           >
             Email
           </Link>
         </div>
-        <p className="text-xs text-[var(--color-fg-dim)]/60">
+        <p className="text-xs text-[var(--color-fg-dim)]">
           &copy; {new Date().getFullYear()} {SITE.name}. Built with Next.js.
         </p>
       </div>
